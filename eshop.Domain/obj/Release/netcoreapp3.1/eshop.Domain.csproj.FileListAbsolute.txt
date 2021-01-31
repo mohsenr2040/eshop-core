@@ -1,0 +1,72 @@
+D:\asp core\e-shop core\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+D:\asp core\e-shop core\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1001\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1002\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\backups\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\laptop\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.deps.json
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Release\netcoreapp3.1\eshop.Domain.pdb

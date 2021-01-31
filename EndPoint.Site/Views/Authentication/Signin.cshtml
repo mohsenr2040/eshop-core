@@ -1,0 +1,194 @@
+﻿@model eshop.Application.Services.Commands.UserLogin.USerLoginDto
+@{
+    ViewData["Title"] = "Signin";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <!-- font---------------------------------------->
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/materialdesignicons.css">
+    <!-- plugin-------------------------------------->
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/noUISlider.min.css">
+    <!-- main-style---------------------------------->
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/main.css">
+</head>
+<body>
+
+    <!-- login----------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <section class="page-account-box">
+                    <div class="col-lg-6 col-md-6 col-xs-12 mx-auto">
+                        <div class="ds-userlogin">
+                            <a href="#" class="account-box-logo">digismart</a>
+                            <div class="account-box">
+                                <div class="account-box-headline">
+                                    <a href="~/signin" class="login-ds active">
+                                        <span class="title">ورود</span>
+                                        <span class="sub-title">به فروشگاه </span>
+                                    </a>
+                                    <a href="~/signup" class="register-ds">
+                                        <span class="title">ثبت نام</span>
+                                        <span class="sub-title">در فروشگاه </span>
+                                    </a>
+                                </div>
+                                <div class="Login-to-account mt-4">
+                                    <div class="account-box-content">
+                                        <h4>ورود به حساب کاربری</h4>
+                                        <form class="form-account text-right" asp-action="Signin" asp-controller="Authentication">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <div class="form-account-title">
+                                                <label asp-for="Username" class="control-label">ایمیل  </label>
+                                                <input asp-for="Username" class="number-email-input">
+                                                <span asp-validation-for="Username" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="Password" class="control-label">رمز عبور</label>
+                                                <a onclick="ForgotPassword()" class="account-link-password">رمز خود را فراموش کرده ام</a>
+                                                <input asp-for="Password" class="password-input">
+                                                <span asp-validation-for="Password" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-auth-row">
+                                                <label for="#" class="ui-checkbox mt-1">
+                                                    <input type="checkbox" value="1" name="login" @*id="remember"*@>
+                                                    <span class="ui-checkbox-check"></span>
+                                                </label>
+                                                <label for="remember" class="remember-me mr-0">مرا به خاطر بسپار</label>
+                                            </div>
+                                            <div class="form-row-account">
+                                                <input type="submit" class="btn btn-primary btn-login" value=" ورود به فروشگاه  " />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- login----------------------------------->
+    <!-- scroll_Progress------------------------->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- scroll_Progress------------------------->
+
+</body>
+</html>
+<!-- file js---------------------------------------------------->
+<script src="~/SiteTemplate/assets/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/bootstrap.js"></script>
+<!-- plugin----------------------------------------------------->
+<script src="~/SiteTemplate/assets/js/vendor/owl.carousel.min.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/jquery.countdown.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/ResizeSensor.min.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/theia-sticky-sidebar.min.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/wNumb.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/nouislider.min.js"></script>
+<!-- main js---------------------------------------------------->
+<script src="~/SiteTemplate/assets/js/main.js"></script>
+
+
+<link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+<script src="~/Sweetalert2/sweetalert2.min.js"></script>
+
+
+<script>
+    function Login() {
+        var Email = $("#Email").val();
+        var Password = $("#Password").val();
+        var IsPersistent = $("#remember").is(':checked');
+        var postData = {
+            'Email': Email,
+            'Password': Password,
+            'IsPersistent': IsPersistent,
+        };
+        $.ajax({
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            type: "POST",
+            url: "Signin",
+            data: postData,
+            success: function (data) {
+                if (data.isSuccess == true) {
+                    swal.fire(
+                        'موفق!',
+                        data.message,
+                        'success'
+                    ).then(function (isConfirm) {
+                        window.location.replace("/");
+                    });
+                }
+                else {
+
+                    swal.fire(
+                        'هشدار!',
+                        data.message,
+                        'warning'
+                    );
+                }
+            },
+            error: function (request, status, error) {
+                swal.fire(
+                    'هشدار!',
+                    request.responseText,
+                    'warning'
+                );
+            }
+        });
+    }
+
+    function ForgotPassword() {
+        var Email = $("#Email").val();
+        var postData = {
+            'Email': Email,
+        };
+        $.ajax({
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            type: "POST",
+            url: "ForgetPassword",
+            data: postData,
+            success: function (data) {
+                if (data.isSuccess == true) {
+                    swal.fire(
+                        'موفق!',
+                        data.message,
+                        'success'
+                    ).then(function (isConfirm) {
+                        window.location.replace("/");
+                    });
+                }
+                else {
+
+                    swal.fire(
+                        'هشدار!',
+                        data.message,
+                        'warning'
+                    );
+                }
+            },
+            error: function (request, status, error) {
+                swal.fire(
+                    'هشدار!',
+                    request.responseText,
+                    'warning'
+                );
+            }
+        });
+    }
+</script>
+

@@ -1,0 +1,164 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Areas/Seller/Views/Shared/_SellerLayout.cshtml";
+}
+
+<section class="basic-elements">
+    @*<div class="row">
+            <div class="col-sm-12"background-color: #e44e4e" >
+                <h4 class="content-header"></h4>
+            </div>
+        </div>*@
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-wrap bar-success">
+                        <h4 class="card-title mb-0">محصول جدید شما</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="px-3">
+                        <div class="form">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicInput"> دسته بندی </label>
+                                            <select disabled="disabled" class="form-control" id="Category" asp-items="@ViewBag.Categories" 
+                                                    onchange="GetSubCategory()">
+                                                <option>انتخاب کنید...</option>
+                                            </select>
+
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicInput"> دسته بندی سطح 2 </label>
+
+                                            <select class="form-control" id="SubCategory" asp-items="@ViewBag.SubCategories"
+                                                    onchange="GetProduct()">
+                                                <option>انتخاب کنید...</option>
+                                            </select>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicInput">نام محصول </label>
+                                            <select class="form-control" id="Product" asp-items="@ViewBag.Products">
+                                                <option>انتخاب کنید...</option>
+                                                <option value="customOption">[ ناموجود در لیست ]</option>
+                                            </select>
+                                        </fieldset>
+
+                                    </div>
+                                    @*<div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicInput"> برند </label>
+                                            <input type="text" class="form-control" id="Brand">
+                                        </fieldset>
+                                    </div>*@
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicInput"> قیمت</label>
+                                            <input type="number" class="form-control" id="Price">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <label for="basicInput"> تعداد موجودی</label>
+                                            <input type="number" class="form-control" id="Inventory">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                        <fieldset class="form-group">
+                                            <br />
+                                            <a id="btnAddProduct" class="btn btn-success col-md-12" onclick="addproduct()"> افزودن محصول  </a>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+<script src="~/Sweetalert2/sweetalert2.min.js"></script>
+
+<script>
+    function GetSubCategory() {
+        var catId = $('#Category').find('option:selected').val();
+        if (document.URL.includes('?')) {
+            window.location.href = document.URL.split('?')[0] + '?catId=' + catId;
+        }
+        else {
+            window.location.href = document.URL + '?catId=' + catId;
+        }
+    }
+    function GetProduct() {
+        var subcatId = $('#SubCategory').find('option:selected').val();
+        if (document.URL.includes('?')) {
+            window.location.href = document.URL.split('?')[0]+'?subcatId=' + subcatId;
+        }
+        else {
+            window.location.href = document.URL + '?subcatId=' + subcatId;
+        }
+    }
+</script>
+<script>
+    function addproduct() {
+        var Category = $('#Category').find('option:selected').val();
+        var SubCategory = $('#SubCategory').find('option:selected').val();
+        var Product = $('#Product').find('option:selected').val();
+        var Price = $('#Price').val();
+        var Inventory = $('#Inventory').val();
+
+        var postData = {
+            'CategoryId': Category,
+            'SubcatId': SubCategory,
+            'ProductId': Product,
+            'SellerPrice': Price,
+            'Inventory': Inventory,
+        };
+
+        $.ajax({
+            contentType: 'application/x-www-form-urlencoded',
+            dataType: 'json',
+            type: "POST",
+            url: "AddProduct",
+            data: postData,
+            success: function (data) {
+                if (data.isSuccess == true) {
+                    swal.fire(
+                        'موفق!',
+                        data.message,
+                        'success'
+                    ).then(function (isConfirm) {
+                        location.reload();
+                    });
+                }
+                else {
+
+                    swal.fire(
+                        'هشدار!',
+                        data.message,
+                        'warning'
+                    );
+                }
+            },
+            error: function (request, status, error) {
+                swal.fire(
+                    'هشدار!',
+                    request.responseText,
+                    'warning'
+                );
+            }
+        });
+    }
+</script>

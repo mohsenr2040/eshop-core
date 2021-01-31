@@ -1,0 +1,9 @@
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\bin\Debug\netcoreapp3.1\eshop.Infrastructure.deps.json
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\bin\Debug\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\bin\Debug\netcoreapp3.1\eshop.Infrastructure.pdb
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Debug\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Debug\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Debug\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Debug\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Debug\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Debug\netcoreapp3.1\eshop.Infrastructure.pdb

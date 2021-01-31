@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201227055648_changeInUser.cs" />
+    <Compile Remove="Migrations\20201227055648_changeInUser.Designer.cs" />
+    <Compile Remove="Migrations\20210102065535_ChangeUsrIdType.cs" />
+    <Compile Remove="Migrations\20210102065535_ChangeUsrIdType.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.1" />
+    <PackageReference Include="microsoft.entityframeworkcore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.relational" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eshop.Application\eshop.Application.csproj" />
+    <ProjectReference Include="..\eshop.Domain\eshop.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

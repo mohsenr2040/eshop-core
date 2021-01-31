@@ -1,0 +1,60 @@
+﻿@using eshop.Application.Services.Carts
+@model CartDto
+@{
+    Layout = null;
+}
+
+<a href="~/cart" class="cart-basket-box">
+    <span class="icon-cart">
+        <i class="mdi mdi-cart"></i>
+    </span>
+    <span class="title-cart">سبد خرید</span>
+    <span class="price-cart">
+        @Model.TotalPrice.ToString("n0")
+        <span>تومان</span>
+    </span>
+    <span class="count-cart">@Model.CartItems.Count</span>
+</a>
+<div class="widget-shopping-cart">
+    <div class="widget-shopping-cart-content">
+        <ul class="product-list-widget">
+            @foreach (var item in Model.CartItems)
+            {
+                <li class="mini-cart-item">
+                    <div class="mini-cart-item-content">
+                        <a href="~/cart/remove?ProductId=@item.Id" class="mini-cart-item-close">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                        <a href="~/products?ProductId=@item.Id" class="mini-cart-item-image d-block">
+                            <img src="~/@item.Images">
+                        </a>
+                        <a href="~/products/detail?ProductId=@item.ProductId" class="product-name-card">@item.ProductName.Substring(0,20)...</a>
+                       
+                        <div class="variation">
+                            <span class="variation-n">فروشنده : </span>
+                            <p class="mb-0"> پلاس</p>
+                        </div>
+                        <div class="quantity">
+                            <span class="quantity-Price-amount">
+                               @item.TotalPriceItem.ToString("n0")
+                                <span>تومان</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            }
+
+        </ul>
+        <div class="mini-card-total">
+            <strong>قیمت کل : </strong>
+            <span class="price-total">
+                @Model.TotalPrice.ToString("n0")
+                <span>تومان</span>
+            </span>
+        </div>
+        <div class="mini-card-button">
+            <a href="~/cart" class="view-card">مشاهده سبد خرید</a>
+            <a href="~/payment" class="card-checkout">تسویه حساب</a>
+        </div>
+    </div>
+</div>

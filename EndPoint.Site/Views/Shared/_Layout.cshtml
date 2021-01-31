@@ -1,0 +1,395 @@
+﻿@using EndPoint.Site.Utilities
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService _authorizationService
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EndPoint.Site</title>
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/materialdesignicons.css">
+    <!-- plugin-------------------------------------->
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/nice-select.css">
+    <!-- main-style---------------------------------->
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/main.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/responsive.css">
+    <link href="~/AdminTemplate/app-assets/css/_Seller.css" rel="stylesheet" />
+    <!-------------------Menu css-------i added------------->
+    @*<link rel="stylesheet" href="~/Menu/assets/css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="~/Menu/assets/css/vazir.css" type="text/css">
+        <link rel="stylesheet" href="~/Menu/assets/css/main.css" type="text/css">*@
+</head>
+
+<body>
+    <!-- header-------------------------------->
+    <header class="header-main">
+        <div class="container-main">
+            <div class="d-block">
+                <section class="h-main-row">
+                    <div class="col-lg-9 col-xs-12 pr">
+                        <div class="header-right">
+                            <div class="col-lg-3 pr">
+                                <div class="header-logo row text-right">
+                                    <a href="~/home/index">
+                                        <img src="~/SiteTemplate/assets/images/logo.png" alt="پلاس">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 pl">
+                                <div class="header-search row text-right">
+                                    <div class="header-search-box">
+
+                                        @await Component.InvokeAsync("Search")
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-xs-12 pl">
+                        <div class="header-left">
+                            <div class="header-account text-left">
+                                <div class="d-block">
+                                    <div class="account-box">
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                        <div class="nav-account d-block pl">
+                                            <span class="icon-account">
+                                                <img src="~/SiteTemplate/assets/images/UserImg.png" class="">
+                                            </span>
+                                            <span class="title-account">@User.Claims.Where(c => c.Type == "FullName").FirstOrDefault().Value</span>
+                                            <div class="dropdown-menu">
+                                                <ul class="account-uls mb-0">
+                                                    <li class="account-item">
+                                                        @if (ClaimUtility.GetRoles(User).Where(r => r == "Seller").Count() >= 1)
+                                                        {
+                                                            <a href="~/Seller/panel/index" class="account-link">پنل کاربری</a>
+                                                        }
+                                                        @*else @if (ClaimUtility.GetRoles(User).Where(r => r == "Admin" || r == "Operator").Count() >= 1)*@
+                                                        else @if( _authorizationService.AuthorizeAsync(User, "Admin").Result.Succeeded)
+                                                        {
+                                                            <a href="~/Admin/panel/index" class="account-link">پنل کاربری</a>
+                                                        }
+                                                    </li>
+                                                    @*<li class="account-item">
+                    <a href="~/SetPhoneNumber" class="account-link">تایید موبایل</a>
+                </li>*@
+                                                    <li class="account-item">
+                                                        <a href="~/orders/index" class="account-link">سفارشات من</a>
+                                                    </li>
+                                                    <li class="account-item">
+                                                        <a href="~/Account" class="account-link">تنظیمات</a>
+                                                    </li>
+                                                    <li class="account-item">
+                                                        <a href="~/signout" class="account-link">خروج</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="nav-account d-block pl">
+                                                <a href="~/signup">
+                                                    <span class="title-account"> ثبت نام </span>
+                                                </a>
+
+                                                <a href="~/signin">
+                                                    <span class="title-account">ورود</span>
+                                                </a>
+                                            </div>
+
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div>
+                    <nav class="header-main-nav">
+                        <div class="d-block">
+                            <div class="align-items-center">
+                                <ul class="menu-ul mega-menu-level-one">
+
+                                    @await Component.InvokeAsync("GetMenu")
+
+                                    <div class="divider-space-card d-block">
+                                        <div class="header-cart-basket">
+
+                                            @await Component.InvokeAsync("GetCart")
+
+                                        </div>
+                                    </div>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <!--    responsive-megamenu-mobile----------------->
+                <nav class="sidebar">
+                    <div class="nav-header">
+                        <div class="header-cover"></div>
+                        <div class="logo-wrap">
+                            <a class="logo-icon" href="#"><img alt="logo-icon" src="~/SiteTemplate/assets/images/logo.png" width="40"></a>
+                        </div>
+                    </div>
+                    <ul class="nav-categories ul-base">
+
+                        @*ViewComponent Mene For Mobile*@
+
+                        @await Component.InvokeAsync("GetMenuForMobile")
+
+                    </ul>
+                </nav>
+                <div class="nav-btn nav-slider">
+                    <span class="linee1"></span>
+                    <span class="linee2"></span>
+                    <span class="linee3"></span>
+                </div>
+                <div class="overlay"></div>
+                <!--    responsive-megamenu-mobile----------------->
+            </div>
+        </div>
+    </header>
+    @*<div class="nav-categories-overlay"></div>*@
+ 
+
+            @RenderBody()
+
+        <!-- footer------------------------------------------->
+        <footer class="footer-main-site">
+            <section class="d-block d-xl-block d-lg-block d-md-block d-sm-block order-1">
+                <div class="footer-shopping-features">
+                    <div class="container-fluid">
+                        <div class="col-12">
+                            <div class="item">
+                                <span class="icon-shopping">
+                                    <i class="fa fa-paper-plane"></i>
+                                </span>
+                                <span class="title-shopping">تحویل اکسپرس</span>
+                                <span class="desc-shopping">در کمترین زمان دریافت کنید</span>
+                            </div>
+                            <div class="item">
+                                <span class="icon-shopping">
+                                    <i class="fa fa-volume-control-phone"></i>
+                                </span>
+                                <span class="title-shopping">پشتیبانی ۲۴ ساعته</span>
+                                <span class="desc-shopping">پشتیبانی هفت روز هفته</span>
+                            </div>
+                            <div class="item">
+                                <span class="icon-shopping">
+                                    <i class="fa fa-home"></i>
+                                </span>
+                                <span class="title-shopping">پرداخت در محل</span>
+                                <span class="desc-shopping">هنگام دریافت پرداخت کنید</span>
+                            </div>
+                            <div class="item">
+                                <span class="icon-shopping">
+                                    <i class="fa fa-repeat"></i>
+                                </span>
+                                <span class="title-shopping">۷ روز ضمانت بازگشت</span>
+                                <span class="desc-shopping">هفت روز مهلت دارید </span>
+                            </div>
+                            <div class="item">
+                                <span class="icon-shopping">
+                                    <i class="fa fa-shield"></i>
+                                </span>
+                                <span class="title-shopping">ضمانت اصل‌بودن کالا</span>
+                                <span class="desc-shopping">تایید اصالت کالا</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="d-block d-xl-block d-lg-block d-md-block d-sm-block order-1">
+                <div class="container-fluid">
+                    <div class="col-12">
+                        <div class="footer-middlebar">
+                            <div class="col-lg-8 d-block pr">
+                                <div class="footer-links">
+                                    @*<div class="col-lg-3 col-md-3 col-xs-12 pr">
+                                            <div class="row">
+                                                <section class="footer-links-col">
+                                                    <div class="headline-links">
+                                                        <a href="#">
+
+                                                        </a>
+                                                    </div>
+                                                    <ul class="footer-menu-ul">
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                فروش در دیجی اسمارت
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                همکاری با سازمان‌ها
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                فرصت‌های شغلی
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-xs-12 pr">
+                                            <div class="row">
+                                                <section class="footer-links-col">
+                                                    <div class="headline-links">
+                                                        <a href="#">
+                                                            خدمات مشتریان
+                                                        </a>
+                                                    </div>
+                                                    <ul class="footer-menu-ul">
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                پاسخ به پرسش‌های متداول
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                رویه‌های بازگرداندن کالا
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                شرایط استفاده
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                حریم خصوصی
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-xs-12 pr">
+                                            <div class="row">
+                                                <section class="footer-links-col">
+                                                    <div class="headline-links">
+                                                        <a href="#">
+                                                            راهنمای خرید از دیجی اسمارت
+                                                        </a>
+                                                    </div>
+                                                    <ul class="footer-menu-ul">
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                نحوه ثبت سفارش
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                رویه ارسال سفارش
+                                                            </a>
+                                                        </li>
+                                                        <li class="menu-item-type-custom">
+                                                            <a href="#">
+                                                                شیوه‌های پرداخت
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                            <div class="col-lg-4 d-block pl">
+                                <div class="shortcode-widget-area">
+                                    <form action="#" class="form-newsletter">
+                                        <fieldset>
+                                            <span class="form-newsletter-title"> با عضویت در خبرنامه از آخرین اخبار و محصولات سایت مطلع شوید...</span>
+                                            <div class="input-group-newsletter">
+                                                <input type="email" class="input-field form-control" placeholder="آدرس ایمیل خود را وارد کنید">
+                                                <button class="btn btn-info btn-secondary" type="submit">ارسال</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-more-info">
+                                <div class="col-lg-10 pr">
+                                    <div class="footer-content d-block">
+                                        <div class="text pr-1">
+                                            <h2 class="title">فروشگاه اینترنتی  </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 pl">
+                                    <div class="footer-safety-partner">
+                                        <div class="widget widget-product card mb-0">
+                                            <div class="product-carousel-symbol owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                                                <div class="owl-stage-outer">
+                                                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+                                                        <div class="owl-item active" style="width: 300.75px; margin-left: 10px;">
+                                                            <div class="item">
+                                                                <a href="#" class="d-block hover-img-link">
+                                                                    <img src="~/SiteTemplate/assets/images/footer/license/L-1.png" class="img-fluid img-brand" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="owl-item active" style="width: 300.75px; margin-left: 10px;">
+                                                            <div class="item">
+                                                                <a href="#" class="d-block hover-img-link mt-0">
+                                                                    <img src="~/SiteTemplate/assets/images/footer/license/L-2.png" class="img-fluid img-brand" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-copyright">
+                                    <div class="footer-copyright-text">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <!-- footer------------------------------------------->
+        <!-- scroll_Progress------------------------->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- scroll_Progress------------------------->
+
+</body>
+@RenderSection("Scripts", false)
+@RenderSection("Modals", false)
+</html>
+<!-- file js---------------------------------------------------->
+
+<script src="~/SiteTemplate/assets/js/vendor/jquery-3.2.1.min.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/bootstrap.js"></script>
+<!-- plugin----------------------------------------------------->
+<script src="~/SiteTemplate/assets/js/vendor/owl.carousel.min.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/jquery.countdown.js"></script>
+<script src="~/SiteTemplate/assets/js/vendor/jquery.nice-select.min.js"></script>
+<!-- main js---------------------------------------------------->
+<script src="~/SiteTemplate/assets/js/main.js"></script>
+
+

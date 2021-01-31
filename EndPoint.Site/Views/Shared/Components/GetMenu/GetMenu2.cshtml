@@ -1,0 +1,92 @@
+﻿@using eshop.Application.Services.Common.Queries.GetMenuItem
+@model List<MenuItemDto>
+@{
+    Layout = null;
+}
+
+     
+            <!-- Menu Level 1 -->
+            <li class="menu-list-1">
+                <a href="#" class="list-item">
+                    <span>دسته بندی کالاها </span>
+                </a>
+                <ul class="menu-level-2">
+
+                    @foreach (var item in Model.Where(n => !n.Name.Contains("خدمات")))
+                    {
+                        <li class="menu-list-2">
+                            <a href="#" class="list-item">
+                                <span>@item.Name</span>
+                            </a>
+                            @if (item.Child.Count > 0)
+                            {
+                                <ul class="menu-level-3">
+                                    <li class="menu-list-3">
+                                        <ul class="menu-level-last">
+                                            @foreach (var child in item.Child)
+                                            {
+                                                <li class="list-heading">
+                                                    <a href="~/products/index?CatId=@child.CatId" class="list-item"> @child.Name</a>
+                                                </li>
+
+                                            }
+                                        </ul>
+                                    </li>
+                                </ul>
+                            }
+                        </li>
+
+                    }
+                </ul><!-- End Menu Level 2 -->
+            </li>
+
+            <li class="menu-list-1">
+                <a href="#" class="list-item">
+                    <span>گروه خدمات </span>
+                </a>
+                <ul class="menu-level-2">
+
+                    @foreach (var item in Model.Where(n => n.Name.Contains("خدمات")))
+                    {
+                        <li class="menu-list-2">
+                            <a href="#" class="list-item">
+                                <span>@item.Name</span>
+                            </a>
+                            @if (item.Child.Count > 0)
+                            {
+                                <ul class="menu-level-3">
+                                    <li class="menu-list-3">
+                                        <ul class="menu-level-last">
+                                            @foreach (var child in item.Child)
+                                            {
+                                                <li class="list-heading">
+                                                    <a href="#" class="list-item"> @child.Name</a>
+                                                </li>
+
+                                            }
+                                        </ul>
+                                    </li>
+                                </ul>
+                            }
+                        </li>
+
+                    }
+                </ul><!-- End Menu Level 2 -->
+            </li>
+
+            <li class="menu-level-last">
+                <a href="~/sellers/register" class="list-item">
+                    <span>ثبت نام فروشندگان و سرویس دهندگان </span>
+                </a>
+            </li>
+            <li class="menu-level-last">
+                <a href="~/sellers/categories?categoryType=1" class="list-item">
+                    <span>  فروشندگان    </span>
+                </a>
+            </li>
+            <li class="menu-level-last">
+                <a href="~/sellers/categories?categoryType=2" class="list-item">
+                    <span> سرویس دهندگان </span>
+                </a>
+            </li>
+      

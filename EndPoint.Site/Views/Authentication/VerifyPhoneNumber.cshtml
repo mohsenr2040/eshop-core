@@ -1,0 +1,84 @@
+﻿@model eshop.Application.Services.Authentication.VerifyPhoneNumber
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تغییر رمز عبور </title>
+   @*// font--------------------------------------*@
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/materialdesignicons.css">
+    @*//plugin------------------------------------*@
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/noUISlider.min.css">
+    @*main-style--------------------------------*@
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <section class="page-account-box">
+                    <div class="col-lg-6 col-md-6 col-xs-12 mx-auto">
+                        <div class="ds-userlogin">
+                            <a href="#" class="account-box-logo">digismart</a>
+                            <div class="account-box">
+                                <div class="Login-to-account mt-4">
+                                    <div class="account-box-content">
+                                        <h4>تایید موبایل</h4>
+                                        <form class="form-account text-right" asp-action="VerifyPhoneNumber" asp-controller="Authentication">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <div class="form-account-title">
+                                                <input asp-for="PhoneNumber" type="hidden" class="number-email-input" />
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="Code"> کد ارسال شده </label>
+                                                <input asp-for="Code" class="number-email-input" />
+                                                <span asp-validation-for="Code" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="form-row-account">
+                                                <input type="submit" class="btn btn-primary btn-login" value="  تایید  ">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="row">
+        <div class="col-md-4">
+            <form asp-action="VerifyPhoneNumber">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PhoneNumber" class="control-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Code" class="control-label"></label>
+                    <input asp-for="Code" class="form-control" />
+                    <span asp-validation-for="Code" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+
+</body>
+</html>

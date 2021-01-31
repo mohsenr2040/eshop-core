@@ -1,0 +1,231 @@
+﻿@model eshop.Application.Services.Authentication.AccountInfoDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب کاربری </title>
+    @*font--------------------------------------*@
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/materialdesignicons.css">
+    @*plugin------------------------------------*@
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/bootstrap.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/vendor/noUISlider.min.css">
+    @*main-style--------------------------------*@
+    <link rel="stylesheet" href="~/SiteTemplate/assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <section class="page-account-box">
+                    <div class="col-lg-6 col-md-6 col-xs-12 mx-auto">
+                        <div class="ds-userlogin">
+                            <a href="~/home/index" class="account-box-logo"></a>
+                            <div class="account-box">
+                                <div class="Login-to-account mt-4">
+                                    <div class="account-box-content">
+                                        <h4>حساب کاربری</h4>
+                                        <form class="form-account text-right">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <label asp-for="FullName" class="control-label">
+                                                            @Html.DisplayNameFor(model => model.FullName):
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label asp-for="FullName" class="control-label">
+                                                            @Html.DisplayFor(model => model.FullName)
+                                                        </label>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label asp-for="Email" class="control-label">
+                                                            @Html.DisplayNameFor(model => model.Email):
+                                                        </label>
+
+                                                    </td>
+                                                    <td>
+                                                        <label asp-for="Email" class="control-label">
+                                                            @Html.DisplayFor(model => model.Email)
+                                                        </label>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <label asp-for="EmailConfirmed" class="control-label">
+                                                            @Html.DisplayNameFor(model => model.EmailConfirmed):
+                                                        </label>
+
+                                                    </td>
+                                                    <td>
+                                                        <label asp-for="EmailConfirmed" class="control-label">
+                                                            @Html.DisplayFor(model => model.EmailConfirmed)
+                                                        </label>
+                                                      
+                                                    </td>
+                                                    <td>
+                                                        @if (Model.EmailConfirmed != true)
+                                                        {
+                                                            <a asp-action="ConfirmEmail">تایید </a>
+                                                        }
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label asp-for="PhoneNumber" class="control-label">
+                                                            @Html.DisplayNameFor(model => model.PhoneNumber):
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <label asp-for="PhoneNumber" class="control-label">
+                                                            @if (Model.PhoneNumber == null)
+                                                            {
+                                                                <span style="color:red">ثبت نشده</span>
+                                                            }
+                                                            else
+                                                            {
+                                                                @Html.DisplayFor(model => model.PhoneNumber)
+                                                            }
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        @if (Model.PhoneNumber == null)
+                                                        {
+                                                            <a asp-action="SetPhoneNumber">ثبت   </a>
+                                                        }
+                                                        else
+                                                        {
+                                                            <a asp-action="SetPhoneNumber">تغییر   </a>
+
+                                                        }
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label asp-for="PhoneNumberConfirmed" class="control-label">
+                                                            @Html.DisplayNameFor(model => model.PhoneNumberConfirmed):
+                                                        </label>
+
+                                                    </td>
+                                                    <td>
+                                                        <label asp-for="PhoneNumberConfirmed" class="control-label">
+                                                            @Html.DisplayFor(model => model.PhoneNumberConfirmed)
+                                                        </label>
+                                                       
+                                                    </td>
+                                                    <td>
+                                                        @if (Model.PhoneNumberConfirmed != true)
+                                                        {
+                                                            <a asp-action="SetPhoneNumber">تایید  </a>
+                                                        }
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <label asp-for="TwoFactorEnabled" class="control-label">
+                                                            @Html.DisplayNameFor(model => model.TwoFactorEnabled):
+                                                        </label>
+
+                                                    </td>
+                                                    <td>
+                                                        <label asp-for="TwoFactorEnabled" class="control-label">
+                                                            @Html.DisplayFor(model => model.TwoFactorEnabled)
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <a asp-action="TwoFactorEnabled"> تغییر  </a>
+
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                            @*<div class="form-account-title">
+                                                <label asp-for="FullName" class="control-label">
+                                                    @Html.DisplayNameFor(model => model.FullName):
+                                                </label>
+                                                <label asp-for="FullName" class="control-label">
+                                                    @Html.DisplayFor(model => model.FullName)
+                                                </label>
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="Email" class="control-label">
+                                                    @Html.DisplayNameFor(model => model.Email):
+                                                </label>
+                                                <label asp-for="Email" class="control-label">
+                                                    @Html.DisplayFor(model => model.Email)
+                                                </label>
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="PhoneNumber" class="control-label">
+                                                    @Html.DisplayNameFor(model => model.PhoneNumber):
+                                                </label>
+                                                <label asp-for="PhoneNumber" class="control-label">
+                                                    @Html.DisplayFor(model => model.PhoneNumber)
+                                                </label>
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="EmailConfirmed" class="control-label">
+                                                    @Html.DisplayNameFor(model => model.EmailConfirmed):
+                                                </label>
+                                                <label asp-for="EmailConfirmed" class="control-label">
+                                                    @Html.DisplayFor(model => model.EmailConfirmed)
+                                                </label>
+                                                @if (Model.EmailConfirmed != true)
+                                                {
+                                                    <a asp-action="SetPhoneNumber">تایید ایمیل</a>
+                                                }
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="PhoneNumberConfirmed" class="control-label">
+                                                    @Html.DisplayNameFor(model => model.PhoneNumberConfirmed):
+                                                </label>
+                                                <label asp-for="PhoneNumberConfirmed" class="control-label">
+                                                    @Html.DisplayFor(model => model.PhoneNumberConfirmed)
+                                                </label>
+                                                @if (Model.PhoneNumberConfirmed != true)
+                                                {
+                                                    <a asp-action="SetPhoneNumber">تایید تلفن همراه</a>
+                                                }
+                                            </div>
+                                            <div class="form-account-title">
+                                                <label asp-for="TwoFactorEnabled" class="control-label">
+                                                    @Html.DisplayNameFor(model => model.TwoFactorEnabled):
+                                                </label>
+                                                <label asp-for="TwoFactorEnabled" class="control-label">
+                                                    @Html.DisplayFor(model => model.TwoFactorEnabled)
+                                                </label>
+                                                <a asp-action="TwoFactorEnabled">برای تغییر کلیک کنید</a>
+                                            </div>*@
+
+
+                                            @*<div class="form-row-account">
+                                                <input type="submit" class="btn btn-primary btn-login" value="  تایید  ">
+                                            </div>*@
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>

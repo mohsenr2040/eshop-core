@@ -1,0 +1,74 @@
+﻿@using eshop.Application.Services.Sellers.SelllerPanel
+@model List<GetOrdersDto>
+@{
+    ViewData["Title"] = "OrderList";
+    Layout = "~/Areas/Seller/Views/Shared/_SellerLayout.cshtml";
+}
+
+<section class="basic-elements">
+    @*<div class="row">
+            <div class="col-sm-12"background-color: #e44e4e" >
+                <h4 class="content-header"></h4>
+            </div>
+        </div>*@
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-wrap bar-success">
+                        <h4 class="card-title mb-0">لیست سفارشات </h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="px-3">
+                        <div class="form">
+                            <div class="form-body">
+                                <div class="row">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>نام کالا</th>
+                                                <th> تاریخ سفارش</th>
+                                                <th> قیمت </th>
+                                                <th>وضعیت پرداخت</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.ToList())
+                                            {
+                                                <tr>
+                                                    <td><a href="~/products/@item.ProductId-pka/@item.ProductName.Replace(' ','-')">@item.ProductName</a></td>
+                                                    <td>
+                                                        @item.OrderDate
+                                                    </td>
+                                                    <td>
+                                                        @item.Price
+                                                    </td>
+                                                    <td>
+                                                        @if (@item.IsPayed)
+                                                        {
+                                                            <b style="color:green">پرداخت شده</b>
+                                                        }
+                                                        else
+                                                        {
+                                                            <b style="color:red">در انتظار پرداخت</b>
+                                                        }
+                                                    </td>
+                                                    <td>
+                                                        <a onclick="confirm(@item.)">تایید</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

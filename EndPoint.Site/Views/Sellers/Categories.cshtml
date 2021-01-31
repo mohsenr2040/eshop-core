@@ -1,0 +1,72 @@
+﻿@using eshop.Application.Services.Sellers.Seller
+@model List<CategoryDto>
+@{
+    ViewData["Title"] = "Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
+
+<div class="container-main">
+    <div class="d-block">
+        <div class="adplacement-container-row" style="background-color:#c0d4d7">
+            <div class="card-header">
+                <div class="card-title-wrap bar-success" style="background-color:lightslategrey">
+
+                </div>
+            </div>
+
+
+            @foreach (var item in Model.ToList())
+            {
+                <div class="col-6 col-lg-3 pr">
+                    <a href="~/Sellers/Getsellers?categoryId=@item.CategoryId" class="adplacement-item">
+                        <div class="adplacement-sponsored_box">
+                            <img src="~/@item.ImageSrc">
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@*<div class="pagination-product">
+    <nav aria-label="Page navigation example">
+        <paging total-records="@Model.TotalRows"
+                page-no="@PageNumber==0? 1: PageNumber"
+                page-size="@PageSize==0?20: PageSize"
+                show-prev-next="true"
+                show-total-pages="false"
+                show-total-records="false"
+                show-page-size-nav="true"
+                show-first-numbered-page="true"
+                show-last-numbered-page="true"
+                query-string-key-page-no="Page"
+                query-string-key-page-size="PageSize"
+                query-string-value="@@(Request.QueryString.Value)"
+                gap-size="2"
+                text-page-size="تعداد هر صفحه:"
+                text-total-pages="pages"
+                text-total-records="records"
+                text-first="&laquo;"
+                text-last="&raquo;"
+                text-previous="&lsaquo;"
+                text-next="&rsaquo;"
+                sr-text-first="First"
+                sr-text-last="Last"
+                sr-text-previous="Previous"
+                sr-text-next="Next"
+                class="row"
+                class-paging-control-div="col"
+                class-info-div="col"
+                class-page-size-div="col"
+                class-paging-control="pagination"
+                class-active-page="disabled"
+                class-disabled-jumping-button="disabled"
+                class-total-pages="badge badge-secondary"
+                class-total-records="badge badge-info">
+        </paging>
+    </nav>
+</div>*@
+
+

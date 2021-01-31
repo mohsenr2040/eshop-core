@@ -1,0 +1,68 @@
+﻿@using eshop.Application.Services.Sellers.Seller
+@model List<SellerProductDto>
+@{
+    ViewData["Title"] = "GetsellerProducts";
+    Layout = "~/Views/Shared/_LayoutSellerPage.cshtml";
+}
+<div class="col-lg-12 col-md-12 col-xs-12 pl" style="   background-color: #e44e4e">
+    <div class="shop-archive-content mt-3 d-block">
+
+        <div class="archive-header">
+            <ul class="nav sort-tabs-options" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <h6 class="archive-header-title"> فروشگاه @Model.ToList().FirstOrDefault().ShopName</h6>
+
+                </li>
+                <li class="nav-item"></li>
+                <li class="nav-item">
+                    <input type="submit" class="btn btn-follow" value="دنبال کردن این فروشگاه" />
+
+                </li>
+            </ul>
+            
+            
+        </div>
+        <div class="container-main">
+            <div class="d-block">
+                <div class="adplacement-container-row" style=" background-color: #e44e4e">
+                    @*<div class="card-header">
+                        <div class="card-title-wrap bar-success" style="background-color:lightslategrey">
+
+                        </div>
+                    </div>*@
+                    <div style=" text-align: center; font-size: smaller; color:black; padding-bottom:7px">
+                        <span> محصولات فروشگاه</span>
+                    </div>
+
+                    @foreach (var item in Model.ToList())
+                    {
+                        <div class="col-6 col-lg-3 pr">
+
+                            <a href="~/products/@item.ProductId-pka/@item.ProductName.Replace(' ','-')/@item.SellerId" class="adplacement-item" style="  background-color: #ecdbdb">
+                                <div class="adplacement-sponsored_box">
+                                    <img src="~/@item.ProductImage">
+                                </div>
+                                <hr style=" border: 5px solid red">
+                                <div style="text-align:center;color:black;font-size:smaller">
+                                    <span>@item.ProductName</span>
+                                    <br />
+                                    <span class="title"> قیمت:</span>
+                                    <span class="amount">
+                                        @item.SellerPrice.ToString("n0")
+                                        <span>تومان</span>
+                                    </span>
+                                    <br />
+
+                                    <span class="title"> تعداد موجودی:</span>
+                                    <span>@item.Inventory </span>
+                                </div>
+                            </a>
+
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

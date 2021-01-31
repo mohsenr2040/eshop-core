@@ -1,0 +1,63 @@
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\e-shop core\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1001\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1002\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\laptop\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+C:\D-drive-5650169\1007\1006\1005\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.deps.json
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\bin\Release\netcoreapp3.1\eshop.Infrastructure.pdb
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csprojAssemblyReference.cache
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfoInputs.cache
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.AssemblyInfo.cs
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.dll
+D:\asp core\e-shop core\backups\1012\e-shop\eshop.Infrastructure\obj\Release\netcoreapp3.1\eshop.Infrastructure.pdb

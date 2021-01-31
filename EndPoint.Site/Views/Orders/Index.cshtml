@@ -1,0 +1,62 @@
+﻿@using eshop.Application.Services.Orders.Queries.GetUserOrder
+@model List<GetUserOrdersDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="basic-elements">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title-wrap bar-success">
+                    <h5 class="card-title mb-0">لیست سفارشات   </h5>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="px-3">
+                    <div class="form">
+                        <div class="form-body">
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>شماره سفارش</th>
+                                        <th>شماره فاکتور</th>
+                                        <th>وضعیت سفارش</th>
+                                        <th>محصولات در این سفارش</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr style="border:solid">
+                                            <td>@item.OrderId</td>
+                                            <td>@item.PaymentId </td>
+                                            <td>@item.OrderState </td>
+
+                                            <td>
+                                                <table>
+                                                    @foreach (var detail in item.OrderDetails)
+                                                    {
+                                                        <tr style="border:ridge">
+                                                            <td> @detail.ProductName</td>
+                                                            <td> @detail.Price</td>
+                                                            <td> @detail.Count</td>
+                                                        </tr>
+                                                    }
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>

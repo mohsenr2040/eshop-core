@@ -1,0 +1,170 @@
+﻿@using eshop.Application.Services.Sellers.Seller
+@model SellersAndCategoriesDto
+@{
+    ViewData["Title"] = "GetSellers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Random r = new Random();
+    int star = r.Next(1, 5);
+}
+
+@*<div class="container-main">
+        <div class="d-block">
+            <div class="adplacement-container-row" style=" background-color: #e44e4e">
+                <div style=" text-align: center; font-size: smaller; color: white; padding-bottom:7px">
+                    <span>انتخاب دسته بندی</span>
+                </div>
+
+                @foreach (var item in Model.Categories.ToList())
+                {
+                    <div class="col-6 col-lg-3 pr" style="height:80px;width:130px">
+                        <a href="~/sellers/Getsellers?Type=@item.CategoryType&categoryId=@item.CategoryId" class="adplacement-item">
+                            <div class="adplacement-sponsored_box">
+                                <img src="~/@item.ImageSrc">
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>*@
+
+<div class="col-lg-12 col-md-12 col-xs-12 pr order-1 d-block" style=" background-color: #e44e4e;">
+    <div style=" text-align: center; font-size: smaller; color: white;">
+        <span>انتخاب دسته بندی</span>
+    </div>
+    <div class="slider-widget-products">
+        <div class="widget widget-product card mb-0">
+            <div class="product-carousel-brand owl-carousel owl-theme owl-rtl owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2234px;">
+
+                        @foreach (var item in Model.Categories.ToList())
+                        {
+                            @if (Model.Categories.IndexOf(@item) == 5)
+                            {
+                                <div class="owl-item active" style="width: 190.75px; margin-left: 10px;">
+                                    <div class="item" href="javascript:void()">
+                                        <a href="~/sellers?categoryId=@item.CategoryId" class="adplacement-item">
+                                            <div class="adplacement-sponsored_box">
+                                                <img src="~/@item.ImageSrc">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="owl-item" style="width: 190.75px; margin-left: 10px;">
+                                    <div class="item" href="javascript:void()">
+                                        <a href="~/sellers?categoryId=@item.CategoryId" class="adplacement-item">
+                                            <div class="adplacement-sponsored_box">
+                                                <img src="~/@item.ImageSrc">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                    </div>
+                </div>
+                <div class="owl-nav">
+                    <button type="button" role="presentation" class="owl-prev disabled">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-main">
+    <div class="d-block">
+        <div class="adplacement-container-row">
+            <div style=" text-align: center; font-size: smaller; color:black; padding-bottom:7px">
+                @if (Model.Sellers.Select(s => s.CatName).Distinct().Count() > 1)
+                {
+                    <span>فروشندگان</span>
+                }
+                else if (Model.Sellers.Select(s => s.CatName).Distinct().Count() == 1)
+                {
+                    <span>فروشندگان/@Model.Sellers.Select(s => s.CatName).FirstOrDefault().ToString()</span>
+                }
+            </div>
+
+
+            @foreach (var item in Model.Sellers.ToList())
+            {
+                <div class="col-6 col-lg-3 pr">
+                    <a href="~/@item.UserName"  class="adplacement-item">
+                        <div class="adplacement-sponsored_box">
+                            <img src="~/images/SellersImages/None.jpg" />
+                        </div>
+                        <div style=" text-align: center; font-size: smaller;color:black;">
+                            <span>فروشگاه @item.ShopName </span>
+                        </div>
+
+                    </a>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@*<div class="col-lg-12 col-md-12 col-xs-12 pl" style=" background-color: #c0d4d7">
+        <div class="shop-archive-content mt-3 d-block">
+            <div class="product-items">
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade show active" id="Most-visited" role="tabpanel" aria-labelledby="Most-visited-tab">
+                        <div class="row">
+
+                            @foreach (var item in Model.Sellers.ToList())
+                            {
+                            <div class="col-lg-3 col-md-3 col-xs-12 order-1 d-block mb-3">
+                                <section class="product-box product product-type-simple" >
+                                    <div class="thumb">
+                                        <a href="~/@item.UserName" class="d-block">
+
+                                            <div class="product-rate">
+
+                                                @for (int i = 1; i <= @star; i++)
+                                                {
+                                                    <i class="fa fa-star active"></i>
+                                                }
+                                                @for (int i = 1; i <= (5 - @star); i++)
+                                                {
+                                                    <i class="fa fa-star"></i>
+                                                }
+                                            </div>
+                                            <img src="~/images/CategoryImages/None.jpg" />
+                                        </a>
+                                    </div>
+                                    <div class="title">
+                                        <a style="color:brown" href="~/@item.UserName">  @item.ShopName</a>
+                                    </div>
+                                    <div>
+                                        <span class="title">
+                                            تلفن:  @item.Phone,@item.Mobile
+                                        </span>
+                                        <br />
+                                        <span>
+                                            آدرس:  @item.FullAddrress.Substring(0, @item.FullAddrress.Length > 30 ? 30 : @item.FullAddrress.Length )
+                                        </span>
+                                    </div>
+                                    </section>
+                            </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+

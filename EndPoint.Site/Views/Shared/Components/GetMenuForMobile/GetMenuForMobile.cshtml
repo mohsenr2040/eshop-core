@@ -1,0 +1,68 @@
+﻿@using eshop.Application.Services.Common.Queries.GetMenuItemForMobile
+@model List<MenuItemDto>
+@{
+    Layout = null;
+}
+
+
+@*<a href="#" class="collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <i class="mdi mdi-chevron-down">
+        </i>کالای دیجیتال
+    </a>*@
+@foreach (var item in Model)
+{
+    <li>
+        <ul>
+            <li class="has-sub">
+                <a href="#" class="category-level-2">
+                    @item.CategoryName
+                </a>
+                @if (item.Child.Count > 0)
+                {
+                    <ul>
+                        @foreach (var child in item.Child)
+                        {
+                            <li>
+                                <a href="~/products/index?CatId=@child.CatId" class="category-level-3">
+                                    @child.CategoryName
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
+
+        </ul>
+    </li>
+}
+<li>
+    <ul>
+        <li class="has-sub">
+            <a href="#" class="category-level-2">
+                فروشندگان 
+            </a>
+
+            <ul>
+
+                <li>
+                    <a href="~/Register" class="category-level-3">
+                        ثبت نام
+                    </a>
+                </li>
+                <li>
+                    <a href="~/sellers" class="category-level-3">
+                        فروشندگان
+                    </a>
+                </li>
+                @*<li>
+                    <a href="~/sellers/categories?categoryType=2" class="category-level-3">
+                        سرویس دهندگان
+                    </a>
+                </li>*@
+            </ul>
+
+        </li>
+
+    </ul>
+</li>
+
