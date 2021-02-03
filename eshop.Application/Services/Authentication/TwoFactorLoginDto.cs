@@ -5,6 +5,7 @@ using System.Text;
 
 namespace eshop.Application.Services.Authentication
 {
+    //Two factor .........
     public class TwoFactorLoginDto
     {
         [Required]
