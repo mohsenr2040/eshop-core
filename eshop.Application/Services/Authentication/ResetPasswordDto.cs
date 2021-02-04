@@ -5,6 +5,7 @@ using System.Text;
 
 namespace eshop.Application.Services.Authentication
 {
+    //Reset Password
     public class ResetPasswordDto
     {
         [Required]
