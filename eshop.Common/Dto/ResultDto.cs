@@ -4,7 +4,7 @@ using System.Text;
 
 namespace eshop.Common.Dto
 {
-    //Result Dto br comm
+    //Result Dto 
     public class ResultDto
     {
         public bool IsSuccess { get; set; }
