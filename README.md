@@ -11,10 +11,10 @@ product's price of sellers is compared.
 	
 ## Technologies
 Project is created with:
--Clean Architecture 
- -ASP.Net Core
- -LINQ
- -SQL Server
+ * Clean Architecture 
+ * ASP.Net Core
+ * LINQ
+ * SQL Server
 	
 ## Launch
  $ Clone the repository in your local repo
