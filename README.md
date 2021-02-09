@@ -16,4 +16,4 @@ price of sellers's product is compared.
  -Install compatible version of nuget packages
  -run in web browser
  
-[Review of Run](./Help/Review.gif)
+[Run preview](./Help/Review.gif)
