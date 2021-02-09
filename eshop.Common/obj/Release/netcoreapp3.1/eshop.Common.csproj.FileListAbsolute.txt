@@ -73,3 +73,6 @@ D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\obj\Release\netcoreapp3
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\bin\Release\netcoreapp3.1\eshop.Domain.dll
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\bin\Release\netcoreapp3.1\eshop.Domain.pdb
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\obj\Release\netcoreapp3.1\eshop.Common.csproj.CopyComplete
+D:\asp core\e-shop core\e-shop\eshop.Common\bin\Release\netcoreapp3.1\eshop.Domain.dll
+D:\asp core\e-shop core\e-shop\eshop.Common\bin\Release\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\e-shop\eshop.Common\obj\Release\netcoreapp3.1\eshop.Common.csproj.CopyComplete
