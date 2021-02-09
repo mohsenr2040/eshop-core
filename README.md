@@ -5,4 +5,4 @@ price of sellers's product is compared.
 
 
  launch
- ![Review of Run](./Help/review.gif)
+ ![Review of Run](./Help/Review.gif)
