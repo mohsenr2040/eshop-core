@@ -17,6 +17,8 @@ Project is created with:
  * SQL Server
 	
 ## Launch
+to run this project:
+```
  $ Clone the repository in your local repo
  $ run database script to create database
  $ open package in visual Studio 2019
