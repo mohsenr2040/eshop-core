@@ -7,7 +7,7 @@
 
 ## General info
 This is a selling product project. Sellers can register and create their own retail store in it.
-price of sellers's product is compared. 
+product's price of sellers is compared. 
 	
 ## Technologies
 Project is created with:
