@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EndPoint.Site.Controllers
 {
+   //cart controller
     public class CartController : Controller
     {
         private readonly ICartService _cartService;
