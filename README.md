@@ -3,7 +3,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Launch](#Launch)
 
 ## General info
 This is a selling product project. Sellers can register and create their own retail store in it.
