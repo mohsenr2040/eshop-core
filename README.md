@@ -24,5 +24,6 @@ to run this project:
  $ open package in visual Studio 2019
  $ Install compatible version of nuget packages
  $ run in web browser
- ...
+ 
+``` 
 [Run preview](./Help/Review.gif)
