@@ -26,4 +26,4 @@ to run this project:
  $ run in web browser
  
 ``` 
-[Run preview](./Help/Review.gif)
+[Run preview in a .gif file](./Help/Review.gif)
