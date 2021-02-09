@@ -1929,11 +1929,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Application\\eshop.Application.csproj",
+      "projectUniqueName": "D:\\asp core\\e-shop core\\e-shop\\eshop.Application\\eshop.Application.csproj",
       "projectName": "eshop.Application",
-      "projectPath": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Application\\eshop.Application.csproj",
+      "projectPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Application\\eshop.Application.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Application\\obj\\",
+      "outputPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1954,11 +1954,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Common\\eshop.Common.csproj": {
-              "projectPath": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Common\\eshop.Common.csproj"
+            "D:\\asp core\\e-shop core\\e-shop\\eshop.Common\\eshop.Common.csproj": {
+              "projectPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Common\\eshop.Common.csproj"
             },
-            "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Domain\\eshop.Domain.csproj": {
-              "projectPath": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Domain\\eshop.Domain.csproj"
+            "D:\\asp core\\e-shop core\\e-shop\\eshop.Domain\\eshop.Domain.csproj": {
+              "projectPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Domain\\eshop.Domain.csproj"
             }
           }
         }

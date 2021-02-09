@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Infrastructure\\eshop.Infrastructure.csproj",
+      "projectUniqueName": "D:\\asp core\\e-shop core\\e-shop\\eshop.Infrastructure\\eshop.Infrastructure.csproj",
       "projectName": "eshop.Infrastructure",
-      "projectPath": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Infrastructure\\eshop.Infrastructure.csproj",
+      "projectPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Infrastructure\\eshop.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\asp core\\e-shop core\\backups\\1012\\e-shop\\eshop.Infrastructure\\obj\\",
+      "outputPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\",
