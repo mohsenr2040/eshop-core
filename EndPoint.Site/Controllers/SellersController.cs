@@ -11,6 +11,7 @@ using eshop.Domain.Entities.Products;
 using eshop.Domain.Entities.Sellers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace EndPoint.Site.Controllers
 {
@@ -19,10 +20,15 @@ namespace EndPoint.Site.Controllers
     {
         private readonly ISellerService _sellerService;
         private readonly IRegisterUserService _registerUserService;
-        public SellersController(ISellerService sellerService, IRegisterUserService registerUserService)
+
+        //
+        private readonly IMemoryCache _memoryCache;
+        public SellersController(ISellerService sellerService, IRegisterUserService registerUserService, IMemoryCache memoryCache)
         {
             _sellerService = sellerService;
             _registerUserService = registerUserService;
+
+            _memoryCache = memoryCache;
         }
         public IActionResult Index()
         {
@@ -107,11 +113,27 @@ namespace EndPoint.Site.Controllers
             return View(_sellerService.GetSellersCategories( categoryId).Data);
         }
 
-        // [HttpGet]
+        //[HttpGet]
         [HttpGet("{username}")]
         public IActionResult GetsellerProducts(string username)
         {
-            return View(_sellerService.GetSellerProducts(username).Data);
+            //Memorycache 
+            var cacheKey = username.ToLower();
+            if (!_memoryCache.TryGetValue(cacheKey, out List<SellerProductDto> ProductList))
+            {
+                ProductList = _sellerService.GetSellerProducts(username).Data;
+                var cacheExpirationOptions = new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpiration = DateTime.Now.AddHours(5),
+                    Priority = CacheItemPriority.Normal,
+                    SlidingExpiration = TimeSpan.FromMinutes(4),
+                    Size = 1024,
+                };
+                _memoryCache.Set(cacheKey, ProductList, cacheExpirationOptions);
+            }
+            return View(ProductList);
+
+
         }
     }
 }

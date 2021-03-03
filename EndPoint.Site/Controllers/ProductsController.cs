@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eshop.Application.Interfaces.FacadPatterns;
 using eshop.Application.Services.Products.Queries.GetProductForSite;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace EndPoint.Site.Controllers
 {
@@ -12,6 +13,7 @@ namespace EndPoint.Site.Controllers
     public class ProductsController : Controller
     {
         private readonly IProductFacad _productFacad;
+      
         public ProductsController(IProductFacad productFacad)
         {
             _productFacad = productFacad;
