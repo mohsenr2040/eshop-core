@@ -22,15 +22,14 @@ namespace eshop.Application.Services.Queries.GetUsers
 
         public ResultGetUserDto Execute(RequestGetUserDto request)
         {
-            ////
-            //
+
             int rowcount = 0;
-            string cacheKey ="allusers";
-            if(request.Str_SearchKey !=null)
+            string cacheKey = "allusers";
+            if (request.Str_SearchKey != null)
             {
                 cacheKey = request.Str_SearchKey.ToLower();
             }
-            
+
             List<GetUserDto> Lst_users;
             string serializedUsers;
             var Redis_encodedUsers = _distributedCache.Get(cacheKey);
