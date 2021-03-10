@@ -19,6 +19,3 @@ D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\obj\Debug\netcoreapp3.1
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\obj\Debug\netcoreapp3.1\eshop.Common.csproj.CopyComplete
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\obj\Debug\netcoreapp3.1\eshop.Common.dll
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Common\obj\Debug\netcoreapp3.1\eshop.Common.pdb
-D:\asp core\e-shop core\e-shop\eshop.Common\bin\Debug\netcoreapp3.1\eshop.Domain.dll
-D:\asp core\e-shop core\e-shop\eshop.Common\bin\Debug\netcoreapp3.1\eshop.Domain.pdb
-D:\asp core\e-shop core\e-shop\eshop.Common\obj\Debug\netcoreapp3.1\eshop.Common.csproj.CopyComplete

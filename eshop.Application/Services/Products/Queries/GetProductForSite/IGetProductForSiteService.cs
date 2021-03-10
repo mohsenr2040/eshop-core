@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace eshop.Application.Services.Products.Queries.GetProductForSite
 {
@@ -17,13 +16,10 @@ namespace eshop.Application.Services.Products.Queries.GetProductForSite
     public class GetProductForSiteService: IGetProductForSiteService
     {
         private readonly IDataBaseContext _context;
-
-        //cache using
-        private readonly IMemoryCache _memoryCache;
         public GetProductForSiteService(IDataBaseContext context)
         {
             _context = context;
-            //_memoryCache = memoryCache;
+
         }
         public ResultDto<ResultProductForSiteDto> Execute(string SearchKey,int? CatId,int Page, int PageSize,Ordering ordering )
         {

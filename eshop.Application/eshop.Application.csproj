@@ -11,9 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
     <PackageReference Include="microsoft.entityframeworkcore" Version="3.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="5.0.1" />
   </ItemGroup>
   
   <ItemGroup>

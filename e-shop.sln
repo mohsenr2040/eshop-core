@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eshop.Persistence", "eshop.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eshop.Common", "eshop.Common\eshop.Common.csproj", "{A2B262A5-69CE-40E8-9558-0E3E552E7E7A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EndPoint.Site", "EndPoint.Site\EndPoint.Site.csproj", "{9F4643A1-13D2-469D-8033-5DC6D865066E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndPoint.Site", "EndPoint.Site\EndPoint.Site.csproj", "{9F4643A1-13D2-469D-8033-5DC6D865066E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

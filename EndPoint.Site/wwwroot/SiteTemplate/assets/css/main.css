@@ -7625,25 +7625,7 @@ footer.footer-main-site .footer-middlebar .footer-copyright .footer-copyright-te
     float: right;
 }
 /* footer-------------------------*/
-.chat-wrap {
-    float:right;
-    position: fixed;
-    left: 50px;
-    bottom: 50px;
-    height: 55px;
-    width: 55px;
-    cursor: pointer;
-    display: block;
-    background-color: #fff;
-    border-radius: 50px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.40);
-    z-index: 10000;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(15px);
-    -webkit-transition: all 200ms linear;
-    transition: all 200ms linear;
-}
+
 /* scroll_Progress---------------------*/
 .progress-wrap {
 	position: fixed;
