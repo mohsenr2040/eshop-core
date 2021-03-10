@@ -1,0 +1,44 @@
+﻿
+
+
+<script src="~/lib/microsoft/signalr/css/jquery-1.9.1.min.js"></script>
+<script src="~/lib/microsoft/signalr/css/jquery.signalR-2.2.2.js"></script>
+<script src="~/signalr/hubs"></script>
+
+
+<div class="container">
+    <h2>Chat Room ...</h2>
+    <hr />
+    <input type="hidden" id="displayName" />
+    <textarea class="form-control" id="message" cols="60" rows="8"></textarea>
+    <p>
+        <input id="btnSend" type="button" class="btn btn-success" value="Send" />
+    </p>
+    <ul id="chats"></ul>
+
+    <script>
+        $(function () {
+            $("#displayName").val(prompt('Please Enter Name :', 'Mehman'));
+            $("#message").focus();
+
+            var chat = $.connection.chatHub;
+
+            $.connection.hub.start().done(function () {
+                alert($.connection.hub.id);
+                chat.server.send($("#displayName").val(), "وارد شد");
+                $("#btnSend").click(function () {
+                    chat.server.send($("#displayName").val(), $("#message").val());
+                    $("#message").val("").focus();
+                });
+
+
+
+            });
+
+            chat.client.addNewMessage = function (name, message) {
+                $("#chats").append("<li> <strong> " + name + " :</strong> " + message + " </li>");
+            }
+
+        });
+    </script>
+</div>
