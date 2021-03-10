@@ -2,6 +2,7 @@
 using eshop.Common;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
+using ServiceStack.Redis;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,17 +20,22 @@ namespace eshop.Application.Services.Queries.GetUsers
             _context = context;
             _distributedCache = distributedCache;
         }
+
         public ResultGetUserDto Execute(RequestGetUserDto request)
         {
             int rowcount = 0;
-
-            var cacheKey = request.Str_SearchKey.ToLower();
+            string cacheKey ="allusers";
+            if(request.Str_SearchKey !=null)
+            {
+                cacheKey = request.Str_SearchKey.ToLower();
+            }
+            
             List<GetUserDto> Lst_users;
             string serializedUsers;
-            var encodedUsers = _distributedCache.Get(cacheKey);
-            if (encodedUsers != null)
+            var Redis_encodedUsers = _distributedCache.Get(cacheKey);
+            if (Redis_encodedUsers != null)
             {
-                serializedUsers = Encoding.UTF8.GetString(encodedUsers);
+                serializedUsers = Encoding.UTF8.GetString(Redis_encodedUsers);
                 Lst_users = JsonConvert.DeserializeObject<List<GetUserDto>>(serializedUsers);
             }
             else
@@ -51,11 +57,11 @@ namespace eshop.Application.Services.Queries.GetUsers
                 //cache
                 Lst_users = userslist;
                 serializedUsers = JsonConvert.SerializeObject(Lst_users);
-                encodedUsers = Encoding.UTF8.GetBytes(serializedUsers);
+                Redis_encodedUsers = Encoding.UTF8.GetBytes(serializedUsers);
                 var options = new DistributedCacheEntryOptions()
                     .SetSlidingExpiration(TimeSpan.FromMinutes(5))
-                    .SetAbsoluteExpiration(DateTime.Now.AddHours(6));
-                _distributedCache.Set(cacheKey, encodedUsers, options);
+                    .SetAbsoluteExpiration(DateTime.Now.AddMinutes(16));
+                _distributedCache.Set(cacheKey, Redis_encodedUsers, options);
             }
             return new ResultGetUserDto
             {

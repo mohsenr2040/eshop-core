@@ -8,7 +8,6 @@ D:\asp core\e-shop core\e-shop\eshop.Application\bin\Release\netcoreapp3.1\eshop
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.csprojAssemblyReference.cache
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.AssemblyInfoInputs.cache
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.AssemblyInfo.cs
-D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.csproj.CoreCompileInputs.cache
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.csproj.CopyComplete
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.dll
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.pdb
@@ -110,3 +109,4 @@ D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Release\netcor
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.csproj.CopyComplete
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.dll
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.pdb
+D:\asp core\e-shop core\e-shop\eshop.Application\obj\Release\netcoreapp3.1\eshop.Application.csproj.CoreCompileInputs.cache

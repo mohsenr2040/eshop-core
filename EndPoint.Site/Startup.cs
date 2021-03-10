@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EndPoint.Hubs;
 using eshop.Application.Interfaces.Contexts;
 using eshop.Application.Interfaces.FacadPatterns;
 using eshop.Application.Services.Carts;
@@ -44,6 +45,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+//using Microsoft.Owin;
+using Owin;
+
 
 
 namespace EndPoint.Site
@@ -134,7 +138,8 @@ namespace EndPoint.Site
                 }
                 return null;
             });
-                
+
+           
 
             services.AddEntityFrameworkSqlServer().AddDbContext<DataBaseContext>(option => option.UseSqlServer(Configuration.GetConnectionString("eshop-con")));
             services.AddControllersWithViews();
@@ -185,6 +190,17 @@ namespace EndPoint.Site
                 //when user does not work for specific time , his account needs to be signed out
                 option.SlidingExpiration = true;
             });
+
+             //add signalr services
+            services.AddSignalR();
+            //services.AddRazorPages();
+            //services.AddCors;
+
+            services.AddMemoryCache();
+            services.AddStackExchangeRedisCache(option => 
+                {
+                    option.Configuration = "localhost:4455";
+                });
             
         }
 
@@ -209,9 +225,10 @@ namespace EndPoint.Site
             app.UseAuthentication();
             app.UseAuthorization();
 
+            
             app.UseEndpoints(endpoints =>
             {
-
+                //endpoints.MapRazorPages();
                 //endpoints.MapControllerRoute(
                 //    name: "Sellers",
                 //    pattern: "Sellers",
@@ -235,7 +252,8 @@ namespace EndPoint.Site
                 //  pattern: "{username}",
                 //  defaults: new { Controller = "Sellers", Action = "GetsellerProducts" });
 
-             
+                endpoints.MapHub<ChatHub>("/chatHub");
+
 
             });
 
