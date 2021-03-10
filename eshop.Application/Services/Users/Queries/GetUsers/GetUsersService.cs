@@ -22,6 +22,8 @@ namespace eshop.Application.Services.Queries.GetUsers
 
         public ResultGetUserDto Execute(RequestGetUserDto request)
         {
+            ////
+            //
             int rowcount = 0;
             string cacheKey ="allusers";
             if(request.Str_SearchKey !=null)

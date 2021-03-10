@@ -180,9 +180,6 @@ D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Vie
 D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Shared\Components\GetCart\GetCart.cshtml.g.cs
 D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Shared\Components\GetMenu\GetMenu2.cshtml.g.cs
 D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Sellers\GetsellerProducts.cshtml.g.cs
-D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\EndPoint.Site.csproj.CoreCompileInputs.cache
-D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\EndPoint.Site.MvcApplicationPartsAssemblyInfo.cs
-D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\EndPoint.Site.MvcApplicationPartsAssemblyInfo.cache
 C:\D-drive-5650169\1001\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\D-drive-5650169\1001\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\appsettings.json
 C:\D-drive-5650169\1001\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\EndPoint.Site.exe
@@ -1543,3 +1540,15 @@ D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Vie
 D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Authentication\VerifySuccess.cshtml.g.cs
 D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Sellers\Register_rzp.cshtml.g.cs
 D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Shared\_LayoutSellerPage.cshtml.g.cs
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\libman.json
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll
+D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Razor_Pages\chat.cshtml.g.cs
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Owin.dll
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\Owin.dll
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\Microsoft.Owin.dll
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\Microsoft.Owin.Security.dll
+D:\asp core\e-shop core\e-shop\EndPoint.Site\bin\Release\netcoreapp3.1\Microsoft.Owin.Host.SystemWeb.dll
+D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\EndPoint.Site.csproj.CoreCompileInputs.cache
+D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\EndPoint.Site.MvcApplicationPartsAssemblyInfo.cs
+D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\EndPoint.Site.MvcApplicationPartsAssemblyInfo.cache
+D:\asp core\e-shop core\e-shop\EndPoint.Site\obj\Release\netcoreapp3.1\Razor\Views\Home\chat.cshtml.g.cs

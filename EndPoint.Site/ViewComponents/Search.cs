@@ -12,12 +12,14 @@ namespace EndPoint.Site.ViewComponents
     public class Search:ViewComponent
     {
         private readonly IGetSearchCategoryService _getSearchCategoryService;
+        //cache using
         public Search(IGetSearchCategoryService getSearchCategoryService)
         {
             _getSearchCategoryService = getSearchCategoryService;
         }
         public IViewComponentResult Invoke()
         {
+            
             //var categories = new SelectList(, "Id","Name");
             return View(viewName: "Search", _getSearchCategoryService.Execute().Data);
         }
