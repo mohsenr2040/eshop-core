@@ -6,6 +6,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
+using eshop.Domain.Entities.Products;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace eshop.Application.Services.Products.Queries.GetProductForSite
 {
@@ -16,18 +20,76 @@ namespace eshop.Application.Services.Products.Queries.GetProductForSite
     public class GetProductForSiteService: IGetProductForSiteService
     {
         private readonly IDataBaseContext _context;
-        public GetProductForSiteService(IDataBaseContext context)
+
+        //cache using
+        private readonly IDistributedCache _distributedCache;
+
+        public GetProductForSiteService(IDataBaseContext context, IDistributedCache distributedCache)
         {
             _context = context;
-
+            _distributedCache = distributedCache;
         }
+        //protected IMemoryCache _memoryCache
+        //{
+        //    get;set { new MemoryCache};
+        //}
         public ResultDto<ResultProductForSiteDto> Execute(string SearchKey,int? CatId,int Page, int PageSize,Ordering ordering )
         {
-            
+            //Using Redis -------
+            var cacheKey = "allproducts";
+            List<Product> List_CachedProducts;
+            string serializedProducts;
+            var Redis_encodedProducts = _distributedCache.Get(cacheKey);
+            if(Redis_encodedProducts!=null)
+            {
+                serializedProducts = Encoding.UTF8.GetString(Redis_encodedProducts);
+                List_CachedProducts = JsonConvert.DeserializeObject<List<Product>>(serializedProducts);
+            }
+            else
+            {
+                //
+                List_CachedProducts = _context.Products
+               .Include(p => p.SellerProducts)
+               .Include(p => p.ProductImages).ToList();
+                //
+                var cacheExpirationOption = new DistributedCacheEntryOptions()
+                {
+                    AbsoluteExpiration = DateTime.Now.AddDays(1),
+                    SlidingExpiration = TimeSpan.FromDays(1),
+                };
+                //
+                serializedProducts =
+                JsonConvert.SerializeObject(List_CachedProducts, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
+                Redis_encodedProducts = Encoding.UTF8.GetBytes(serializedProducts);
+
+                _distributedCache.Set(cacheKey, Redis_encodedProducts,cacheExpirationOption);
+
+            }
+
+            //_memoryCache
+            //if (!_memoryCache.TryGetValue(cacheKey,out List<Product> List_CachedProduct))
+            //{
+            //    List_CachedProduct = _context.Products
+            //    .Include(p => p.SellerProducts)
+            //    .Include(p => p.ProductImages).ToList();
+
+            //    var cacheExpirationOption = new MemoryCacheEntryOptions()
+            //    {
+            //        AbsoluteExpiration = DateTime.Now.AddDays(1),
+            //        Priority = CacheItemPriority.Normal,
+            //        SlidingExpiration = TimeSpan.FromDays(1),
+            //        Size = 10258,
+            //    };
+            //    _memoryCache.Set(cacheKey, List_CachedProduct,cacheExpirationOption);
+            //}
+
+
             int TotalRows = 0;
-            var productQuery = _context.Products
-                .Include(p=>p.SellerProducts)
-                .Include(p => p.ProductImages)
+            var productQuery = List_CachedProducts
                 .AsQueryable();
             
            
