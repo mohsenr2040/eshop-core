@@ -24,6 +24,7 @@ to run this project:
  $ open package in visual Studio 2019
  $ Install compatible version of nuget packages
  $ run in web browser
+ $ Also Run Redis-server in port 4455 
  
 ``` 
 [Run preview in a .gif file](./Help/Review.gif)
