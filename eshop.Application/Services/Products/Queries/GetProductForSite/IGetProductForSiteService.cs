@@ -49,6 +49,7 @@ namespace eshop.Application.Services.Products.Queries.GetProductForSite
             {
                 //
                 List_CachedProducts = _context.Products
+               .Include(p=>p.Category)
                .Include(p => p.SellerProducts)
                .Include(p => p.ProductImages).ToList();
                 //
