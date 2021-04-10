@@ -185,7 +185,19 @@ namespace EndPoint.Site
                 //when user does not work for specific time , his account needs to be signed out
                 option.SlidingExpiration = true;
             });
-            
+
+            ///Caching
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = "localhost:4455";
+            });
+
+            services.AddDistributedMemoryCache();
+            //services.AddDistributedredisCache(option =>
+            //{
+                
+            //});
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
