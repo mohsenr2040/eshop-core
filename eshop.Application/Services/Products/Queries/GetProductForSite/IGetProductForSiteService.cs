@@ -22,52 +22,60 @@ namespace eshop.Application.Services.Products.Queries.GetProductForSite
         private readonly IDataBaseContext _context;
 
         //cache using
-        private readonly IDistributedCache _distributedCache;
+        //private readonly IDistributedCache _distributedCache;
+        private readonly IMemoryCache _memoryCache;
 
-        public GetProductForSiteService(IDataBaseContext context, IDistributedCache distributedCache)
+
+        public GetProductForSiteService(IDataBaseContext context, IMemoryCache memoryCache)
         {
             _context = context;
-            _distributedCache = distributedCache;
+            _memoryCache = memoryCache;
         }
         //protected IMemoryCache _memoryCache
         //{
-        //    get;set { new MemoryCache};
+        //    get { } set { }
         //}
         public ResultDto<ResultProductForSiteDto> Execute(string SearchKey,int? CatId,int Page, int PageSize,Ordering ordering )
         {
-            //Using Redis -------
+            //Memorycache -------
             var cacheKey = "allproducts";
-            List<Product> List_CachedProducts;
-            string serializedProducts;
-            var Redis_encodedProducts = _distributedCache.Get(cacheKey);
-            if(Redis_encodedProducts!=null)
-            {
-                serializedProducts = Encoding.UTF8.GetString(Redis_encodedProducts);
-                List_CachedProducts = JsonConvert.DeserializeObject<List<Product>>(serializedProducts);
-            }
-            else
+            //List<Product> List_CachedProducts;
+            //string serializedProducts;
+            //var Redis_encodedProducts = _distributedCache.Get(cacheKey);
+            //if(Redis_encodedProducts!=null)
+            //{
+            //    serializedProducts = Encoding.UTF8.GetString(Redis_encodedProducts);
+            //    List_CachedProducts = JsonConvert.DeserializeObject<List<Product>>(serializedProducts);
+            //}
+            //else
+            if (!_memoryCache.TryGetValue(cacheKey, out List<Product> List_CachedProducts))
             {
                 //
                 List_CachedProducts = _context.Products
-               .Include(p=>p.Category)
+               .Include(p => p.Category)
                .Include(p => p.SellerProducts)
                .Include(p => p.ProductImages).ToList();
                 //
-                var cacheExpirationOption = new DistributedCacheEntryOptions()
+                var cacheExpirationOption = new MemoryCacheEntryOptions
                 {
-                    AbsoluteExpiration = DateTime.Now.AddDays(1),
-                    SlidingExpiration = TimeSpan.FromDays(1),
+                    AbsoluteExpiration = DateTime.Now.AddHours(5),
+                    Priority = CacheItemPriority.Normal,
+                    SlidingExpiration = TimeSpan.FromMinutes(4),
+                    Size = 1024,
                 };
-                //
-                serializedProducts =
-                JsonConvert.SerializeObject(List_CachedProducts, Formatting.None,
-                        new JsonSerializerSettings()
-                        {
-                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
-                        });
-                Redis_encodedProducts = Encoding.UTF8.GetBytes(serializedProducts);
 
-                _distributedCache.Set(cacheKey, Redis_encodedProducts,cacheExpirationOption);
+                _memoryCache.Set(cacheKey, List_CachedProducts, cacheExpirationOption);
+
+                //
+                //serializedProducts =
+                //JsonConvert.SerializeObject(List_CachedProducts, Formatting.None,
+                //        new JsonSerializerSettings()
+                //        {
+                //            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                //        });
+                //Redis_encodedProducts = Encoding.UTF8.GetBytes(serializedProducts);
+
+                //_distributedCache.Set(cacheKey, Redis_encodedProducts, cacheExpirationOption);
 
             }
 
