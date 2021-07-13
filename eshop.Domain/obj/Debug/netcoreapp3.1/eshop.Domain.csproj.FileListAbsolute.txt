@@ -4,7 +4,6 @@ D:\asp core\e-shop core\e-shop\eshop.Domain\bin\Debug\netcoreapp3.1\eshop.Domain
 D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.csprojAssemblyReference.cache
 D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.AssemblyInfoInputs.cache
 D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.AssemblyInfo.cs
-D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
 D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.dll
 D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.pdb
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\bin\Debug\netcoreapp3.1\eshop.Domain.deps.json
@@ -16,3 +15,4 @@ D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.dll
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.pdb
+D:\asp core\e-shop core\e-shop\eshop.Domain\obj\Debug\netcoreapp3.1\eshop.Domain.csproj.CoreCompileInputs.cache

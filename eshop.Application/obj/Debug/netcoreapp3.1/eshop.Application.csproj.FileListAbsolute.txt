@@ -11,7 +11,6 @@ D:\asp core\e-shop core\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.A
 D:\asp core\e-shop core\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.Application.pdb
 D:\asp core\e-shop core\e-shop\eshop.Application\bin\Debug\netcoreapp3.1\eshop.Common.dll
 D:\asp core\e-shop core\e-shop\eshop.Application\bin\Debug\netcoreapp3.1\eshop.Common.pdb
-D:\asp core\e-shop core\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.Application.csproj.CoreCompileInputs.cache
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\bin\Debug\netcoreapp3.1\eshop.Application.deps.json
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\bin\Debug\netcoreapp3.1\eshop.Application.dll
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\bin\Debug\netcoreapp3.1\eshop.Application.pdb
@@ -26,3 +25,4 @@ D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Debug\netcorea
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.Application.csproj.CopyComplete
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.Application.dll
 D:\asp core\e-shop core\backups\1012\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.Application.pdb
+D:\asp core\e-shop core\e-shop\eshop.Application\obj\Debug\netcoreapp3.1\eshop.Application.csproj.CoreCompileInputs.cache

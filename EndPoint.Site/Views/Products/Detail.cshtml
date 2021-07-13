@@ -7,21 +7,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container-main" >
+<div class="container-main">
     <div class="d-block">
         <div class="page-content page-row">
             <div class="main-row" style="   background-color: #e44e4e">
                 @*<div id="breadcrumb">
-                    <i class="mdi mdi-home"></i>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                            <li class="breadcrumb-item"><a href="#">کالای دیجیتال</a></li>
-                            <li class="breadcrumb-item"><a href="#">موبایل</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">گوشی موبایل سامسونگ مدل Galaxy Note 10 SM-N970F/DS دو سیم‌کارت ظرفیت 256 گیگابایت</li>
-                        </ol>
-                    </nav>
-                </div>*@
+                        <i class="mdi mdi-home"></i>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                                <li class="breadcrumb-item"><a href="#">کالای دیجیتال</a></li>
+                                <li class="breadcrumb-item"><a href="#">موبایل</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">گوشی موبایل سامسونگ مدل Galaxy Note 10 SM-N970F/DS دو سیم‌کارت ظرفیت 256 گیگابایت</li>
+                            </ol>
+                        </nav>
+                    </div>*@
                 <div class="col-lg">
                     <div class="product type-product">
                         <div class="col-lg-5 col-xs-12 pr d-block" style="padding: 0;">
@@ -68,9 +68,9 @@
                                                                             <a href="#" class="share-social share-social-facebook">
                                                                                 <i class="mdi mdi-facebook"></i>
                                                                             </a>
-                                                                            
+
                                                                             @*<a class="share-social share-social-whatsapp" onclick="@_shareService.Share("https://wa.me/?text=")"> <i class="mdi mdi-whatsapp"></i></a>*@
-                                                                            <a onclick="window.location.href='https://wa.me/?text='+document.URL "  data-action="share/whatsapp/share" class="share-social share-social-whatsapp">
+                                                                            <a onclick="window.location.href='https://wa.me/?text='+document.URL " data-action="share/whatsapp/share" class="share-social share-social-whatsapp">
                                                                                 <i class="mdi mdi-whatsapp"></i>
                                                                             </a>
                                                                             <a href="#" class="share-social share-social-email-outline">
@@ -132,37 +132,37 @@
                                                     </div>
                                                 </li>
                                                 @*<li class="Three-dimensional">
-                                                    <a href="#" class="btn-option btn-Three-dimensional" data-toggle="modal" data-target="#more-product">
-                                                        <i class="mdi mdi-more"></i>
-                                                        <span>نمایش بیشتر</span>
-                                                    </a>
-                                                    <div class="modal fade" id="more-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered more-product" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-body">
-                                                                    <div id="custom-events">
-                                                                        @foreach (var item in Model.ImagesSrc)
-                                                                        {
+                                                        <a href="#" class="btn-option btn-Three-dimensional" data-toggle="modal" data-target="#more-product">
+                                                            <i class="mdi mdi-more"></i>
+                                                            <span>نمایش بیشتر</span>
+                                                        </a>
+                                                        <div class="modal fade" id="more-product" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered more-product" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-body">
+                                                                        <div id="custom-events">
+                                                                            @foreach (var item in Model.ImagesSrc)
+                                                                            {
 
-                                                                            <a href="~/@item">
-                                                                                <img src="~/@item" />
-                                                                            </a>
-                                                                        }
+                                                                                <a href="~/@item">
+                                                                                    <img src="~/@item" />
+                                                                                </a>
+                                                                            }
 
 
 
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </li>
-                                                <li class="Three-dimensional">
-                                                    <a href="product-comparison.html" class="btn-option btn-compare">
-                                                        <i class="mdi mdi-compare"></i>
-                                                        <span>مقایسه</span>
-                                                    </a>
-                                                </li>*@
+                                                    </li>
+                                                    <li class="Three-dimensional">
+                                                        <a href="product-comparison.html" class="btn-option btn-compare">
+                                                            <i class="mdi mdi-compare"></i>
+                                                            <span>مقایسه</span>
+                                                        </a>
+                                                    </li>*@
                                             </ul>
                                         </div>
                                     </div>
@@ -186,7 +186,7 @@
                                                         </a>
                                                     </li>
                                                 }
-                                          
+
                                             </ul>
                                         </div>
                                     </div>
@@ -201,131 +201,131 @@
                                     @Model.Name
                                 </h1>
                                 @*<div class="product-guaranteed text-success">
-                                    12
-                                    <span>فروش موفق</span>
-                                </div>*@
+                                        12
+                                        <span>فروش موفق</span>
+                                    </div>*@
                             </div>
                             @*<div class="product-attributes">
-                                <div class="product-config">
-                                    <span class="product-title-en">  @Model.Name</span>
-                                    <div class="product-rate">
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
-                                        <i class="fa fa-star active"></i>
+                                    <div class="product-config">
+                                        <span class="product-title-en">  @Model.Name</span>
+                                        <div class="product-rate">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>*@
-                        <div class="product-config-wrapper">
-                            <div class="product-directory">
-                                <ul>
-                                    <li>
-                                        <span>
-                                            <i class="fa fa-archive"></i> دسته:
-                                        </span>
-                                        <a href="#" class="product-link product-cat-title">@Model.Category</a>
+                                </div>*@
+                            <div class="product-config-wrapper">
+                                <div class="product-directory">
+                                    <ul>
+                                        <li>
+                                            <span>
+                                                <i class="fa fa-archive"></i> دسته:
+                                            </span>
+                                            <a href="#" class="product-link product-cat-title">@Model.Category</a>
 
-                                    </li>
+                                        </li>
 
-                                    <li>
-                                        <span>
-                                            برند:
-                                        </span>
-                                        <a href="#" class="product-link product-tag-title">@Model.Brand</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col=lg-6 col-md-6 col-xs-12 pr">
-                                <div class="product-variants">
-
-                                </div>
-                                <div class="product-params pt-3">
-                                    <ul data-title="ویژگی‌های محصول">
-
-                                        @foreach (var item in Model.Features.Take(5))
-                                        {
-                                            <li>
-                                                <span>@item.DisplayName: </span>
-                                                <span>@item.Value</span>
-                                            </li>
-                                        }
-
-
+                                        <li>
+                                            <span>
+                                                برند:
+                                            </span>
+                                            <a href="#" class="product-link product-tag-title">@Model.Brand</a>
+                                        </li>
                                     </ul>
                                 </div>
-                                <div class="product-price-survey-question">
-                                    آیا قیمت مناسب‌تری سراغ دارید؟
-                                    <div class="answers">
-                                        <a href="#" class="product-price-survery-answer price-yes btn btn-secondary">بلی</a>
-                                        <a href="#" class="product-price-survery-answer price-no btn btn-secondary">خیر</a>
+                                <div class="col=lg-6 col-md-6 col-xs-12 pr">
+                                    <div class="product-variants">
+
+                                    </div>
+                                    <div class="product-params pt-3">
+                                        <ul data-title="ویژگی‌های محصول">
+
+                                            @foreach (var item in Model.Features.Take(5))
+                                            {
+                                                <li>
+                                                    <span>@item.DisplayName: </span>
+                                                    <span>@item.Value</span>
+                                                </li>
+                                            }
+
+
+                                        </ul>
+                                    </div>
+                                    <div class="product-price-survey-question">
+                                        آیا قیمت مناسب‌تری سراغ دارید؟
+                                        <div class="answers">
+                                            <a href="#" class="product-price-survery-answer price-yes btn btn-secondary">بلی</a>
+                                            <a href="#" class="product-price-survery-answer price-no btn btn-secondary">خیر</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            @if (Model.SellerId != null)
-                            {
-                                <div class="col=lg-6 col-md-6 col-xs-12 pr">
-                                    <div class="product-seller-info">
-                                        <div class="seller-info-changable">
-                                            <div class="product-seller-row vendor">
-                                                <span class="title"> فروشنده:</span>
-                                                <a href="~/@Model.UserName" class="product-name">@Model.SellerName</a>
-                                            </div>
-                                            <div class="product-seller-row guarantee">
-                                                <span class="title"> سایر فروشندگان:</span>
-                                                <a href="javascript:void()" onclick="ShowModalProductSellers()" class="product-name">مشاهده</a>
-                                            </div>
-                                            <div class="product-seller-row guarantee">
-                                                <span class="title"> گارانتی:</span>
-                                                <a href="#" class="product-name">  </a>
-                                            </div>
-                                            <div class="product-seller-row price">
-                                                <span class="title"> قیمت:</span>
-                                                <a href="#" class="product-name">
-                                                    <span class="amount">
-                                                        @Model.SellerPrice.ToString("n0")
-                                                        <span>تومان</span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                            <div class="product-seller-row guarantee">
-                                                <span class="title mt-3"> تعداد:</span>
-                                                <div class="quantity pl">
-                                                    <input type="number" min="1" max="100" step="1" value="1"><div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>
+                                @if (Model.SellerId != null)
+                                {
+                                    <div class="col=lg-6 col-md-6 col-xs-12 pr">
+                                        <div class="product-seller-info">
+                                            <div class="seller-info-changable">
+                                                <div class="product-seller-row vendor">
+                                                    <span class="title"> فروشنده:</span>
+                                                    <a href="~/@Model.UserName" class="product-name">@Model.SellerName</a>
+                                                </div>
+                                                <div class="product-seller-row guarantee">
+                                                    <span class="title"> سایر فروشندگان:</span>
+                                                    <a href="javascript:void()" onclick="ShowModalProductSellers()" class="product-name">مشاهده</a>
+                                                </div>
+                                                <div class="product-seller-row guarantee">
+                                                    <span class="title"> گارانتی:</span>
+                                                    <a href="#" class="product-name">  </a>
+                                                </div>
+                                                <div class="product-seller-row price">
+                                                    <span class="title"> قیمت:</span>
+                                                    <a href="#" class="product-name">
+                                                        <span class="amount">
+                                                            @Model.SellerPrice.ToString("n0")
+                                                            <span>تومان</span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="product-seller-row guarantee">
+                                                    <span class="title mt-3"> تعداد:</span>
+                                                    <div class="quantity pl">
+                                                        <input type="number" min="1" max="100" step="1" value="1"><div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-seller-row add-to-cart">
+                                                    <a href="~/cart/addtocart?ProductId=@Model.Id&SellerId=@Model.SellerId&ProductName=@Model.Name" class="btn-add-to-cart btn btn-primary">
+                                                        <span class="btn-add-to-cart-txt">افزودن به سبد خرید</span>
+                                                    </a>
                                                 </div>
                                             </div>
-                                            <div class="product-seller-row add-to-cart">
-                                                <a href="~/cart/addtocart?ProductId=@Model.Id&SellerId=@Model.SellerId&ProductName=@Model.Name" class="btn-add-to-cart btn btn-primary">
-                                                    <span class="btn-add-to-cart-txt">افزودن به سبد خرید</span>
-                                                </a>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col=lg-6 col-md-6 col-xs-12 pr">
+                                        <div class="product-seller-info">
+                                            <div class="seller-info-changable">
+
+
+                                                <div class="product-seller-row guarantee">
+                                                    <span class="title"> وضعیت موجودی</span>
+                                                    <a href="#" class="product-name"> ناموجود </a>
+                                                </div>
+
+
+                                                <div class="product-seller-row badge-black">
+                                                    <a class="btn-add-to-cart btn btn-primary">
+                                                        <span class="btn-add-to-cart-txt">موجود شد اطلاع بده</span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="col=lg-6 col-md-6 col-xs-12 pr">
-                                <div class="product-seller-info">
-                                    <div class="seller-info-changable">
-                                       
-                                       
-                                        <div class="product-seller-row guarantee">
-                                            <span class="title"> وضعیت موجودی</span>
-                                            <a href="#" class="product-name"> ناموجود </a>
-                                        </div>
-                                       
-                                     
-                                        <div class="product-seller-row badge-black">
-                                            <a  class="btn-add-to-cart btn btn-primary">
-                                                <span class="btn-add-to-cart-txt">موجود شد اطلاع بده</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                }
                             </div>
-                            }
-                        </div>
                         </section>
                     </div>
                     <div class="product-usp">
@@ -426,59 +426,59 @@
                                 </div>
                             </section>
                             <!--<div class="content-expert-articles">-->
-                                @*<section class="content-expert-article">
-                                    <button class="content-expert-button">
-                                        <span class="show-more"><i class="mdi mdi-plus"></i></span>
-                                        <span class="show-less"><i class="mdi mdi-minus"></i></span>
-                                    </button>
-                                    <h3 class="content-expert-title">طراحی و ساخت؛ زیبای خاص</h3>
-                                    <div class="content-expert-text">
-                                        <p style="text-align:right">باید در همین ابتدا اعتراف کنیم Galaxy Note 10 یک گوشی بسیار زیباست. البته شاید این تعریف کمی شخصی به نظر برسد اما ظاهر این گوشی آن‌قدر زیباست که جایی را برای گله و شکایت باقی نمی‌گذارد. در این گوشی دوست‌داشتنی صفحه‌نمایش تقریباً تمام قاب جلویی را پوشانده است. این گوشی ابعاد بزرگی دارد و با صفحه‌نمایش 6.3 که تقریبا 0.2 اینچ بزرگتر از S10 است، در گروه فبلت‌ها جای می‌گیرد. اگر به دنبال خرید این گوشی هوشمند هستید، احتمالاً قبلاً هم گوشی بزرگی داشته‌اید و اندازه آن برایتان آزاردهنده نخواهد بود. اولین راه‌حل موفق برای ساده کردن فرمول زیبایی و کارایی بیشتر، تغییر مکان حسگر اثرانگشت در گلکسی نوت 10 است. با توجه به امنیت بالای این راه برای باز کردن گوشی، حذف آن چندان منطقی به نظر نمی‌رسد. در این گوشی خبری از حسگر اثرانگشت روی قاب جلویی نیست و در عوض این حسگر زیر صفحه‌نمایش قرار گرفته است تا Galaxy Note 10 از همه نظر به گوشی مدرن تبدیل شود. تفاوت دیگری که امسال گلکسی سری نوت با گلسی سری S &nbsp;داشته اند محل قرار گرفتن دوربین سلفی آن ها است. به طوری که دوربین سلفی در S10 در قسمت بالای سمت راست قرار گرفته و در نوت 10 در مرکز بالای صفحه نمایش تعبیه شده است.</p>
-                                        <div class="content-expert-img">
-                                            <img src="assets/images/page-single-product/tab-content/note10-1.jpg">
-                                        </div>
-                                    </div>
-                                </section>*@
-                                @*<section class="content-expert-article">
-                                    <button class="content-expert-button">
-                                        <span class="show-more"><i class="mdi mdi-plus"></i></span>
-                                        <span class="show-less"><i class="mdi mdi-minus"></i></span>
-                                    </button>
-                                    <h3 class="content-expert-title">صفحه‌نمایش؛ همان خیره‌کننده‌ی همیشگی</h3>
-                                    <div class="content-expert-text">
-                                        <p style="text-align:right">مثل همیشه یکی از نقاط قوت گوشی سری محصولات Galaxy Note صفحه‌نمایش آن‌هاست. فناوری Super AMOLED به معنی تصاویر زنده و شفافیت خیره‌کننده در کنار پشتیبانی از نمایش ویدئوهای HDR است. گلکسی نوت 10 از یک صفحه نمایش 6.3 اینچی بهره می برد، که تقریبا تمام قاب جلویی را پوشانده است. سامسونگ مدت ها است که برای پرچمداران خود از صفحه نمایش هایی با لبه های منحنی شکل استفاده می کند؛ کاری که با تولید S8 آغاز کرد و گوشی Note 10 هم از این قاعده مستثنی نیست. انحنای لبه‌ها باعث می‌شود حس کنید فضای بسیار بیشتری در اختیار دارید. این نمایشگر، تراکم پیکسلی فوق‌العاده 401 در هر اینچ دارد روی نوت 10 قرار داده شده است؛ می‌توان این‌گونه در نظر گرفت که سامسونگ احتمالاً استفاده از تعداد پیکسل بالاتر را به علت مصرف باتری بیشتر و اندازه‌ی بزرگ‌تر را به علت بزرگ‌ترشدن سایز گوشی کنار گذاشته است.</p>
-                                        <div class="content-expert-img">
-                                            <img src="assets/images/page-single-product/tab-content/note10-2.jpg">
-                                        </div>
-                                        <p style="text-align:right">به دلیل O شکل بودن بریدگی قسمت بالای آن، نام Infinity-O برای آن انتخاب شده است. نمایشگرهای Infinity در واقع از ویژگی های صفحه نمایش های سامسونگ است که بدون هیچ بریدگی یا Bezel تولید می شوند و برای اولین بار با به کار گیری در گوشی های&nbsp; Galaxy S8 و&nbsp; Galaxy S8+ معرفی شد.</p>
-                                        <div class="content-expert-img">
-                                            <img src="assets/images/page-single-product/tab-content/note10-3.jpg">
-                                        </div>
-                                        <p style="text-align:right">نمایشگر نوت 10 هم از فناوری همیشه روشن سود می‌برد که با استفاده از بخش تنظیمات حالا می‌توانید شخصی‌سازی‌های بیشتری را برای آن در نظر بگیرید. سامسونگ موفق شده است برای این گوشی نسبت صفحه‌نمایش به بدنه 90.9 درصد را به دست آورد که برای یک گوشی امروزی هم میزان بسیار مطلوبی به‌حساب می‌آید. تراز سفیدی مناسب، نور کافی برای دیدن محتویات زیر نور‌های شدید، تراکم پیکسلی بالا که هنگام دیدن تصویر یا خواندن متن کمک می‌کند تا جزییات بیشتری را ببینید، از مشخصات نمایشگر نوت 10 هستند.</p>
-                                        <div class="content-expert-img">
-                                            <img src="assets/images/page-single-product/tab-content/note10-4.jpg">
-                                        </div>
-                                    </div>
-                                </section>*@
-                                <!--<section class="content-expert-article">
-                                    <button class="content-expert-button">
-                                        <span class="show-more"><i class="mdi mdi-plus"></i></span>
-                                        <span class="show-less"><i class="mdi mdi-minus"></i></span>
-                                    </button>-->
-                                    @*<h3 class="content-expert-title">سخت‌افزار، سیستم‌عامل و کارایی</h3>
-                                    <div class="content-expert-text">
-                                        <p style="text-align:right">چیپست اگزونوس 9825 از چیپست‌های 7 نانومتری سامسونگ در قلب اس نوت 10 قرار گرفته است. چیپست 7 نانومتری به معنی قدرت بالا و مصرف بهینه باتری گوشی است. هرساله سخت‌افزارهای نسل جدیدتر برای گوشی‌های موبایل در نظر گرفته می‌شوند که این سخت‌افزار شامل چیپست هم می‌شود. واضح است که چیپست نسل جدید سامسونگ بسیار سریع است اما در عمل سرعت‌بالای آن را نمی‌توان انقلابی دانست. سری‌های قبلی محصولات گلکسی سامسونگ که از تراشه اگزونوس استفاده می‌کردند گاهی اوقات در زمان استفاده بسیار سنگین خاموش می‌شدند. به نظر می‌رسد در گلکسی جدید به خاطر وجود رم 8 گیگابیتی، خبری از این مشکل نباشد.</p>
-                                        <div class="content-expert-img">
-                                            <img src="assets/images/page-single-product/tab-content/note10-5.jpg">
-                                        </div>
-                                        <p style="text-align:right">نتیجه‌ی این لیست، سخت‌افزاری است که جای هیچ انتقادی را باقی نمی‌گذارد و در هر حالی بهترین بازده ممکن را دارد. سامسونگ در هر حالتی بهترین استفاده‌ی ممکن را از این سخت‌افزار کرده است. باید اطمینان داشته باشیم وقتی این سخت‌افزار برای پردازش واقعیت افزوده، فیلم‌برداری 2160 فریم بر ثانیه، تطبیق چهره و عنبیه برای بازکردن قفل گوشی طراحی و ساخته شده؛ دیگر در مورد بازی‌هایی که نهایتاً چند فریم خروجی دارند یا برنامه‌هایی که مقدار کمی از رم را اشغال می‌کنند، همچنین اجرای اندروید و رابط کاربری سامسونگ، هیچ مشکلی نخواهد داشت. پس خیالتان راحت باشد که هیچ عملیاتی وجود ندارد که گلکسی نوت 10 از پس انجام دادن آن برنیاید یا در انجام دادن آن کم‌کاری کند.</p>
-                                        <div class="content-expert-img">
-                                            <img src="assets/images/page-single-product/tab-content/note10-6.jpg">
-                                        </div>
-                                        <p style="text-align:right">اندازه بزرگ‌تر در بیشتر گوشی‌های موبایل نوید باتری با ظرفیت بیشتر را می‌دهد؛ البته باتری در گوشی نوت 10 تفاوت چشمگیری را به خود ندیده است و ظرفیت آن برابر با 3500 میلی‌آمپر است که با توجه به چیپست مدرن این گوشی باید تا مدت‌زمان مطلوبی انرژی را در خود نگه دارد. البته رزولوشن بالای صفحه‌نمایش باعث شده است که باتری به میزان بیشتری مصرف شود و از باتری گوشی انتظار روشن نگه‌داشتن آن تا بیش از یک روز را نداشته باشیم. این گوشی مانند پاوربانکی پرقدرت امکان شارژ بی‌سیم دیگر دستگاه‌ها را دارد. اما این نکته را نباید فراموش کنیم که گلکسی نوت 10 شارژ بی‌سیم گوشی‌های دیگر را با سرعت بسیار بالا (با توان 9 واتی) انجام می‌دهد. همان‌طور که گفتیم این گوشی می‌تواند دیگر گوشی‌ها و گجت‌های دارای فناوری شارژ بی‌سیم را شارژ کند. یکی از ویژگی‌های خاص و البته دوست‌داشتنی در مورد گوشی‌های سامسونگ امکان صفحه‌نمایش همیشه روشن است. این امکان نوتیفیکیشن‌ها را بدون نیاز به باز کردن گوشی برای کاربر به نمایش در می‌آورد.</p>
-                                    </div>*@
-                                <!--</section>
-                            </div>-->
+                            @*<section class="content-expert-article">
+                <button class="content-expert-button">
+                    <span class="show-more"><i class="mdi mdi-plus"></i></span>
+                    <span class="show-less"><i class="mdi mdi-minus"></i></span>
+                </button>
+                <h3 class="content-expert-title">طراحی و ساخت؛ زیبای خاص</h3>
+                <div class="content-expert-text">
+                    <p style="text-align:right">باید در همین ابتدا اعتراف کنیم Galaxy Note 10 یک گوشی بسیار زیباست. البته شاید این تعریف کمی شخصی به نظر برسد اما ظاهر این گوشی آن‌قدر زیباست که جایی را برای گله و شکایت باقی نمی‌گذارد. در این گوشی دوست‌داشتنی صفحه‌نمایش تقریباً تمام قاب جلویی را پوشانده است. این گوشی ابعاد بزرگی دارد و با صفحه‌نمایش 6.3 که تقریبا 0.2 اینچ بزرگتر از S10 است، در گروه فبلت‌ها جای می‌گیرد. اگر به دنبال خرید این گوشی هوشمند هستید، احتمالاً قبلاً هم گوشی بزرگی داشته‌اید و اندازه آن برایتان آزاردهنده نخواهد بود. اولین راه‌حل موفق برای ساده کردن فرمول زیبایی و کارایی بیشتر، تغییر مکان حسگر اثرانگشت در گلکسی نوت 10 است. با توجه به امنیت بالای این راه برای باز کردن گوشی، حذف آن چندان منطقی به نظر نمی‌رسد. در این گوشی خبری از حسگر اثرانگشت روی قاب جلویی نیست و در عوض این حسگر زیر صفحه‌نمایش قرار گرفته است تا Galaxy Note 10 از همه نظر به گوشی مدرن تبدیل شود. تفاوت دیگری که امسال گلکسی سری نوت با گلسی سری S &nbsp;داشته اند محل قرار گرفتن دوربین سلفی آن ها است. به طوری که دوربین سلفی در S10 در قسمت بالای سمت راست قرار گرفته و در نوت 10 در مرکز بالای صفحه نمایش تعبیه شده است.</p>
+                    <div class="content-expert-img">
+                        <img src="assets/images/page-single-product/tab-content/note10-1.jpg">
+                    </div>
+                </div>
+            </section>*@
+                            @*<section class="content-expert-article">
+                <button class="content-expert-button">
+                    <span class="show-more"><i class="mdi mdi-plus"></i></span>
+                    <span class="show-less"><i class="mdi mdi-minus"></i></span>
+                </button>
+                <h3 class="content-expert-title">صفحه‌نمایش؛ همان خیره‌کننده‌ی همیشگی</h3>
+                <div class="content-expert-text">
+                    <p style="text-align:right">مثل همیشه یکی از نقاط قوت گوشی سری محصولات Galaxy Note صفحه‌نمایش آن‌هاست. فناوری Super AMOLED به معنی تصاویر زنده و شفافیت خیره‌کننده در کنار پشتیبانی از نمایش ویدئوهای HDR است. گلکسی نوت 10 از یک صفحه نمایش 6.3 اینچی بهره می برد، که تقریبا تمام قاب جلویی را پوشانده است. سامسونگ مدت ها است که برای پرچمداران خود از صفحه نمایش هایی با لبه های منحنی شکل استفاده می کند؛ کاری که با تولید S8 آغاز کرد و گوشی Note 10 هم از این قاعده مستثنی نیست. انحنای لبه‌ها باعث می‌شود حس کنید فضای بسیار بیشتری در اختیار دارید. این نمایشگر، تراکم پیکسلی فوق‌العاده 401 در هر اینچ دارد روی نوت 10 قرار داده شده است؛ می‌توان این‌گونه در نظر گرفت که سامسونگ احتمالاً استفاده از تعداد پیکسل بالاتر را به علت مصرف باتری بیشتر و اندازه‌ی بزرگ‌تر را به علت بزرگ‌ترشدن سایز گوشی کنار گذاشته است.</p>
+                    <div class="content-expert-img">
+                        <img src="assets/images/page-single-product/tab-content/note10-2.jpg">
+                    </div>
+                    <p style="text-align:right">به دلیل O شکل بودن بریدگی قسمت بالای آن، نام Infinity-O برای آن انتخاب شده است. نمایشگرهای Infinity در واقع از ویژگی های صفحه نمایش های سامسونگ است که بدون هیچ بریدگی یا Bezel تولید می شوند و برای اولین بار با به کار گیری در گوشی های&nbsp; Galaxy S8 و&nbsp; Galaxy S8+ معرفی شد.</p>
+                    <div class="content-expert-img">
+                        <img src="assets/images/page-single-product/tab-content/note10-3.jpg">
+                    </div>
+                    <p style="text-align:right">نمایشگر نوت 10 هم از فناوری همیشه روشن سود می‌برد که با استفاده از بخش تنظیمات حالا می‌توانید شخصی‌سازی‌های بیشتری را برای آن در نظر بگیرید. سامسونگ موفق شده است برای این گوشی نسبت صفحه‌نمایش به بدنه 90.9 درصد را به دست آورد که برای یک گوشی امروزی هم میزان بسیار مطلوبی به‌حساب می‌آید. تراز سفیدی مناسب، نور کافی برای دیدن محتویات زیر نور‌های شدید، تراکم پیکسلی بالا که هنگام دیدن تصویر یا خواندن متن کمک می‌کند تا جزییات بیشتری را ببینید، از مشخصات نمایشگر نوت 10 هستند.</p>
+                    <div class="content-expert-img">
+                        <img src="assets/images/page-single-product/tab-content/note10-4.jpg">
+                    </div>
+                </div>
+            </section>*@
+                            <!--<section class="content-expert-article">
+            <button class="content-expert-button">
+                <span class="show-more"><i class="mdi mdi-plus"></i></span>
+                <span class="show-less"><i class="mdi mdi-minus"></i></span>
+            </button>-->
+                            @*<h3 class="content-expert-title">سخت‌افزار، سیستم‌عامل و کارایی</h3>
+            <div class="content-expert-text">
+                <p style="text-align:right">چیپست اگزونوس 9825 از چیپست‌های 7 نانومتری سامسونگ در قلب اس نوت 10 قرار گرفته است. چیپست 7 نانومتری به معنی قدرت بالا و مصرف بهینه باتری گوشی است. هرساله سخت‌افزارهای نسل جدیدتر برای گوشی‌های موبایل در نظر گرفته می‌شوند که این سخت‌افزار شامل چیپست هم می‌شود. واضح است که چیپست نسل جدید سامسونگ بسیار سریع است اما در عمل سرعت‌بالای آن را نمی‌توان انقلابی دانست. سری‌های قبلی محصولات گلکسی سامسونگ که از تراشه اگزونوس استفاده می‌کردند گاهی اوقات در زمان استفاده بسیار سنگین خاموش می‌شدند. به نظر می‌رسد در گلکسی جدید به خاطر وجود رم 8 گیگابیتی، خبری از این مشکل نباشد.</p>
+                <div class="content-expert-img">
+                    <img src="assets/images/page-single-product/tab-content/note10-5.jpg">
+                </div>
+                <p style="text-align:right">نتیجه‌ی این لیست، سخت‌افزاری است که جای هیچ انتقادی را باقی نمی‌گذارد و در هر حالی بهترین بازده ممکن را دارد. سامسونگ در هر حالتی بهترین استفاده‌ی ممکن را از این سخت‌افزار کرده است. باید اطمینان داشته باشیم وقتی این سخت‌افزار برای پردازش واقعیت افزوده، فیلم‌برداری 2160 فریم بر ثانیه، تطبیق چهره و عنبیه برای بازکردن قفل گوشی طراحی و ساخته شده؛ دیگر در مورد بازی‌هایی که نهایتاً چند فریم خروجی دارند یا برنامه‌هایی که مقدار کمی از رم را اشغال می‌کنند، همچنین اجرای اندروید و رابط کاربری سامسونگ، هیچ مشکلی نخواهد داشت. پس خیالتان راحت باشد که هیچ عملیاتی وجود ندارد که گلکسی نوت 10 از پس انجام دادن آن برنیاید یا در انجام دادن آن کم‌کاری کند.</p>
+                <div class="content-expert-img">
+                    <img src="assets/images/page-single-product/tab-content/note10-6.jpg">
+                </div>
+                <p style="text-align:right">اندازه بزرگ‌تر در بیشتر گوشی‌های موبایل نوید باتری با ظرفیت بیشتر را می‌دهد؛ البته باتری در گوشی نوت 10 تفاوت چشمگیری را به خود ندیده است و ظرفیت آن برابر با 3500 میلی‌آمپر است که با توجه به چیپست مدرن این گوشی باید تا مدت‌زمان مطلوبی انرژی را در خود نگه دارد. البته رزولوشن بالای صفحه‌نمایش باعث شده است که باتری به میزان بیشتری مصرف شود و از باتری گوشی انتظار روشن نگه‌داشتن آن تا بیش از یک روز را نداشته باشیم. این گوشی مانند پاوربانکی پرقدرت امکان شارژ بی‌سیم دیگر دستگاه‌ها را دارد. اما این نکته را نباید فراموش کنیم که گلکسی نوت 10 شارژ بی‌سیم گوشی‌های دیگر را با سرعت بسیار بالا (با توان 9 واتی) انجام می‌دهد. همان‌طور که گفتیم این گوشی می‌تواند دیگر گوشی‌ها و گجت‌های دارای فناوری شارژ بی‌سیم را شارژ کند. یکی از ویژگی‌های خاص و البته دوست‌داشتنی در مورد گوشی‌های سامسونگ امکان صفحه‌نمایش همیشه روشن است. این امکان نوتیفیکیشن‌ها را بدون نیاز به باز کردن گوشی برای کاربر به نمایش در می‌آورد.</p>
+            </div>*@
+                            <!--</section>
+        </div>-->
                         </div>
                         <div class="tab-pane fade" id="Specifications" role="tabpanel" aria-labelledby="Specifications-tab">
                             <article>
@@ -571,162 +571,134 @@
                                                 نظر
                                                 شما به عنوان مالک محصول ثبت خواهد شد.
                                             </p>
-                                            <a href="#" class="btn-add-comment btn btn-secondary">افزودن نظر جدید</a>
+                                            <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput"> نظر</label>
+                                                    <textarea id="Comment" class="form-control " rows="5"></textarea>
+                                                </fieldset>
+                                            </div>
+                                            <a href="javascript:void()" onclick="SendComment()" class="btn-add-comment btn btn-secondary">افزودن نظر جدید</a>
                                         </div>
                                     </div>
                                     <div class="product-comment-list">
                                         <ul class="comment-list">
-                                            <li>
-                                                <div class="col-lg-3 pr">
-                                                    <section>
-                                                        <div class="comments-user-shopping">
-                                                            حسن شجاعی
-                                                            <div class="cell-date">
-                                                                در تاریخ ۱۸ فروردین ۱۳۹۹
-                                                            </div>
-                                                            <div class="message-light"><i class="fa fa-thumbs-o-up"></i>خرید این محصول را توصیه می‌کنم</div>
-                                                        </div>
-                                                    </section>
-                                                </div>
-                                                <div class="col-lg-9 pl">
-                                                    <div class="article">
-                                                        <ul class="comment-text">
-                                                            <div class="header">
-                                                                <div>بهتر از آیفون</div>
-                                                                <div class="product-rate pl">
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                </div>
-                                                                <p>در کل سامسونگ کاربردی تر از آیفون هست ولی از نظر کیفیت تصویر و سرعت آیفون بهتره و کلاس!</p>
-                                                            </div>
-                                                            <div class="comments-evaluation">
-                                                                <div class="comments-evaluation-positive">
-                                                                    <span>نقاط قوت</span>
-                                                                    <ul>
-                                                                        <li>
-                                                                            سبک
-                                                                        </li>
-                                                                        <li>
-                                                                            سرعت پردازش بالا
-                                                                        </li>
-                                                                        <li>
-                                                                            خوش دست
-                                                                        </li>
-                                                                        <li>
-                                                                            صفحه نمایش عالی
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="comments-evaluation-negative">
-                                                                    <span>نقاط قوت</span>
-                                                                    <ul>
-                                                                        <li>
-                                                                            قیمت زیاد
-                                                                        </li>
-                                                                        <li>
-                                                                            باطری ضعیف
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="footer">
-                                                                    <div class="comments-likes">
-                                                                        آیا این نظر برایتان مفید بود؟
-                                                                        <button class="btn-like js-comment-like" type="submit">
-                                                                            بله
-                                                                            <span class="count">8</span>
-                                                                        </button>
-                                                                        <button class="btn-like js-comment-dislike" type="submit">
-                                                                            خیر
-                                                                            <span class="count">4</span>
-                                                                        </button>
+                                            @if (ViewBag.Comments != null)
+                                                @foreach (var comment in ViewBag.Comments)
+                                                {
+                                                    <li>
+                                                        <div class="col-lg-3 pr">
+                                                            <section>
+                                                                <div class="comments-user-shopping">
+                                                                    @comment.user
+                                                                    <div class="cell-date">
+                                                                        در تاریخ ۱۸ فروردین ۱۳۹۹
                                                                     </div>
+                                                                    <div class="message-light"><i class="fa fa-thumbs-o-up"></i>خرید این محصول را توصیه می‌کنم</div>
                                                                 </div>
-                                                            </div>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col-lg-3 pr">
-                                                    <section>
-                                                        <div class="comments-user-shopping">
-                                                            جلال بهرامی راد
-                                                            <div class="cell-date">
-                                                                در تاریخ ۱۹ فروردین ۱۳۹۹
-                                                            </div>
-                                                            <div class="message-light"><i class="fa fa-thumbs-o-up"></i>خرید این محصول را توصیه می‌کنم</div>
+                                                            </section>
                                                         </div>
-                                                    </section>
-                                                </div>
-                                                <div class="col-lg-9 pl">
-                                                    <div class="article">
-                                                        <ul class="comment-text">
-                                                            <div class="header">
-                                                                <div>عالی و صدرصد بهتر از اپل</div>
-                                                                <div class="product-rate pl">
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                    <i class="fa fa-star active"></i>
-                                                                </div>
-                                                                <p>عالییه بنظرمن اونایی که میرن پول گوشی های ایفون با اون قیمت رو میدن با استفاده از این گوشی باید نظرشونو عوض کنن</p>
-                                                            </div>
-                                                            <div class="comments-evaluation">
-                                                                <div class="comments-evaluation-positive">
-                                                                    <span>نقاط قوت</span>
-                                                                    <ul>
-                                                                        <li>
-                                                                            سبک
-                                                                        </li>
-                                                                        <li>
-                                                                            سرعت پردازش بالا
-                                                                        </li>
-                                                                        <li>
-                                                                            خوش دست
-                                                                        </li>
-                                                                        <li>
-                                                                            صفحه نمایش عالی
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="comments-evaluation-negative">
-                                                                    <span>نقاط قوت</span>
-                                                                    <ul>
-                                                                        <li>
-                                                                            قیمت زیاد
-                                                                        </li>
-                                                                        <li>
-                                                                            باطری ضعیف
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="footer">
-                                                                    <div class="comments-likes">
-                                                                        آیا این نظر برایتان مفید بود؟
-                                                                        <button class="btn-like js-comment-like" type="submit">
-                                                                            بله
-                                                                            <span class="count">8</span>
-                                                                        </button>
-                                                                        <button class="btn-like js-comment-dislike" type="submit">
-                                                                            خیر
-                                                                            <span class="count">4</span>
-                                                                        </button>
+                                                        <div class="col-lg-9 pl">
+                                                            <div class="article">
+                                                                <ul class="comment-text">
+                                                                    <div class="header">
+                                                                        <div>@comment.text</div>
+                                                                        <div class="product-rate pl">
+                                                                            <i class="fa fa-star active"></i>
+                                                                            <i class="fa fa-star active"></i>
+                                                                            <i class="fa fa-star active"></i>
+                                                                            <i class="fa fa-star active"></i>
+                                                                            <i class="fa fa-star active"></i>
+                                                                        </div>
+                                                                        <p>@comment.text</p>
                                                                     </div>
-                                                                </div>
+
+                                                                    <div class="comments-evaluation">
+                                                                        <div class="comments-evaluation-positive">
+                                                                            <span>نقاط قوت</span>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    سبک
+                                                                                </li>
+                                                                                <li>
+                                                                                    سرعت پردازش بالا
+                                                                                </li>
+                                                                                <li>
+                                                                                    خوش دست
+                                                                                </li>
+                                                                                <li>
+                                                                                    صفحه نمایش عالی
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="comments-evaluation-negative">
+                                                                            <span>نقاط قوت</span>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    قیمت زیاد
+                                                                                </li>
+                                                                                <li>
+                                                                                    باطری ضعیف
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="footer">
+                                                                            <div class="comments-likes">
+                                                                                آیا این نظر برایتان مفید بود؟
+                                                                                <button class="btn-like js-comment-like" type="submit">
+                                                                                    بله
+                                                                                    <span class="count">8</span>
+                                                                                </button>
+                                                                                <button class="btn-like js-comment-dislike" type="submit">
+                                                                                    خیر
+                                                                                    <span class="count">4</span>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </ul>
                                                             </div>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                                        </div>
+                                                    </li>
+                                                    @if (@comment.Replies != null)
+                                                    {
+                                        <li>
+                                            <div class="col-lg-3 pr">
+                                            </div>
+                                            <div class="col-lg-3 pr">
+                                            </div>
+                                            <div class="col-lg-4 pr">
+                                                <section>
+                                                    @foreach (var reply in @comment.Replies)
+                                                    {
+                                                        <div class="comments-user-shopping">
+                                                            @reply.user
+
+                                                            <div class="cell-date">
+                                                                @reply.text
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </section>
+                                            </div>
+
+                                        </li>
+                                                    }
+                                                    <li>
+                                                        <a href="javascript:void()"  onclick="AddReply()" class="btn-add-comment btn btn-secondary">پاسخ نظر </a>
+
+                                                    </li>
+                                                }
                                         </ul>
+
+
                                     </div>
+
+
                                 </div>
+
                             </div>
                         </div>
+                        
                         <div class="tab-pane fade" id="question-and-answer" role="tabpanel" aria-labelledby="question-and-answer-tab">
                             <div class="faq">
                                 <h2 class="params-headline">
@@ -880,7 +852,13 @@
             </div>
         </div>
     </div>
+
 </div>
+
+@Html.Hidden("ProductId", @Model.Id)
+@*@Html.HiddenFor(m => m.Id, new { Value = Model.Id })*@
+@*<input id="ProductId" type="text"  value="@Model.Id"  hidden="hidden"/>*@
+
 
 <link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
 <script src="~/Sweetalert2/sweetalert2.min.js"></script>
@@ -889,19 +867,118 @@
 
         window.location.href = '@Url.Action("Detail", "Products")/SellerId=' + SellerId;
 
-        $('#GetSellersProduct').modal('hide');
+        $('#GetProductSellers').modal('hide');
     }
 
     function ShowModalProductSellers() {
-        $('#GetSellersProduct').modal('show');
+        $('#GetProductSellers').modal('show');
     }
-  
+
+    function SendComment() {
+        var Comment = $('#Comment').val();
+        var PId = $('#ProductId').val();
+                var postData = {
+                    'Text': Comment,
+                    'ProductId':PId,
+                };
+
+                $.ajax({
+                    contentType: 'application/x-www-form-urlencoded',
+                    dataType: 'json',
+                    type: "POST",
+                    url:"@Url.Action("RegisterComment", "Products")",
+                    data: postData,
+                    success: function (data) {
+                        if (data.isSuccess == true) {
+                            swal.fire(
+                                'موفق!',
+                                data.message,
+                                'success'
+                            ).then(function (isConfirm) {
+                                location.reload();
+                            });
+
+
+                        }
+                        else {
+
+                            swal.fire(
+                                '1هشدار!',
+                                data.message,
+                                'warning'
+                            );
+
+                        }
+                    },
+                    error: function (request, status, error) {
+                        swal.fire(
+                            'هشدار2!',
+                            request.responseText,
+                            'warning'
+                        );
+                    }
+
+                });
+
+
+
+    }
+
+    function AddReply() {
+
+        var postData = {
+                    'commentId':'60ebcf8357ba50c5eee67029',
+                    'user': 'علی',
+                    'text':'خوب بید',
+                };
+
+                $.ajax({
+                    contentType: 'application/x-www-form-urlencoded',
+                    dataType: 'json',
+                    type: "POST",
+                    url:"@Url.Action("AddReply", "Products")",
+                    data: postData,
+                    success: function (data) {
+                        if (data.isSuccess == true) {
+                            swal.fire(
+                                'موفق!',
+                                data.message,
+                                'success'
+                            ).then(function (isConfirm) {
+                                location.reload();
+                            });
+
+
+                        }
+                        else {
+
+                            swal.fire(
+                                '1هشدار!',
+                                data.message,
+                                'warning'
+                            );
+
+                        }
+                    },
+                    error: function (request, status, error) {
+                        swal.fire(
+                            'هشدار2!',
+                            request.responseText,
+                            'warning'
+                        );
+                    }
+
+                });
+
+
+
+    }
 </script>
 
 @section Modals
 {
     <!-- Modal Edit User -->
-    <div class="modal fade" id="GetSellersProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="GetProductSellers" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -921,7 +998,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (Model.ProdustSellers!=null)
+                                @if (Model.ProdustSellers != null)
                                 {
                                     @foreach (var item in Model.ProdustSellers.ToList())
                                     {

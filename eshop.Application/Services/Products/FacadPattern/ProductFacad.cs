@@ -10,6 +10,7 @@ using eshop.Application.Services.Products.Queries.GetProductForAdmin;
 using eshop.Application.Services.Products.Queries.GetProductForSite;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,12 +23,13 @@ namespace eshop.Application.Services.Products.FacadPattern
         private readonly IHostingEnvironment _environment;
 
         private readonly IDistributedCache _distributedCache;
+        private readonly IMemoryCache _memoryCache;
 
-        public ProductFacad(IDataBaseContext context,IHostingEnvironment environment, IDistributedCache distributedCache)
+        public ProductFacad(IDataBaseContext context,IHostingEnvironment environment, IMemoryCache memoryCache)
         {
             _context = context;
             _environment = environment;
-            _distributedCache = distributedCache;
+            _memoryCache = memoryCache;
         }
 
         private IAddNewCategoryService _addNewCategory;
@@ -91,7 +93,7 @@ namespace eshop.Application.Services.Products.FacadPattern
         {
             get
             {
-                return _getProductForSiteService = _getProductForSiteService ?? new GetProductForSiteService(_context,_distributedCache);
+                return _getProductForSiteService = _getProductForSiteService ?? new GetProductForSiteService(_context,_memoryCache);
             }
         }
 
