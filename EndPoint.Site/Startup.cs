@@ -44,7 +44,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.Extensions.Caching.StackExchangeRedis;
+using eshop.Application.Services.MongoDb;
+using Microsoft.Extensions.Options;
 
 namespace EndPoint.Site
 {
@@ -134,7 +136,7 @@ namespace EndPoint.Site
                 }
                 return null;
             });
-                
+
 
             services.AddEntityFrameworkSqlServer().AddDbContext<DataBaseContext>(option => option.UseSqlServer(Configuration.GetConnectionString("eshop-con")));
             services.AddControllersWithViews();
@@ -158,7 +160,7 @@ namespace EndPoint.Site
                     policy.RequireRole("Admin");
                 });
             });
-         
+
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -174,7 +176,7 @@ namespace EndPoint.Site
                 options.SignIn.RequireConfirmedAccount = false;
                 options.SignIn.RequireConfirmedEmail = true;
                 options.SignIn.RequireConfirmedPhoneNumber = true;
-            }) ;
+            });
             services.ConfigureApplicationCookie(option =>
             {
                 //cookie setting
@@ -197,8 +199,15 @@ namespace EndPoint.Site
             services.AddDistributedMemoryCache();
             //services.AddDistributedredisCache(option =>
             //{
-                
+
             //});
+            ///Add MongoDb settings
+            services.Configure<eshopCommentsSettings>(
+              Configuration.GetSection(nameof(eshopCommentsSettings)));
+
+            services.AddSingleton<IeshopCommentsSettings>(sp =>
+                sp.GetRequiredService<IOptions<eshopCommentsSettings>>().Value);
+            services.AddSingleton<CommentService>();
 
         }
 
