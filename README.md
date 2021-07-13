@@ -15,6 +15,8 @@ Project is created with:
  * ASP.Net Core
  * LINQ
  * SQL Server
+ * Redis
+ * mongoDb
 	
 ## Launch
 to run this project:
