@@ -22,7 +22,23 @@ namespace EndPoint.Site.Utilities
                 return null;
             }
         }
-       
+
+        public static string GetUserFullName(ClaimsPrincipal User)
+        {
+            var claimsIdentity = User.Identity as ClaimsIdentity;
+
+            if (claimsIdentity.FindFirst(ClaimTypes.NameIdentifier) != null)
+            {
+                return claimsIdentity.FindFirst(c => c.Type.Contains("FullName")).Value;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         public static string GetUserEmail(ClaimsPrincipal User)
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
