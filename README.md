@@ -6,8 +6,7 @@
 * [Launch](#Launch)
 
 ## General info
-This is a selling product project. Sellers can register and create their own retail store in it.
-The product price of the sellers is compared. 
+eShop web application 
 	
 ## Technologies
 Project is created with:
