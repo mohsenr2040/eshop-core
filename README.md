@@ -28,4 +28,4 @@ to run this project:
  $ Also Run Redis-server in port 4455 
  
 ``` 
-[Run preview in a .gif file](./Help/Review.gif)
+[Running Application in a .gif file](./Help/Review.gif)
