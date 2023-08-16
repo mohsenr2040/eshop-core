@@ -9938,27 +9938,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\IT Expert\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\asp core\\e-shop core\\e-shop\\EndPoint.Site\\EndPoint.Site.csproj",
+      "projectUniqueName": "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\EndPoint.Site\\EndPoint.Site.csproj",
       "projectName": "EndPoint.Site",
-      "projectPath": "D:\\asp core\\e-shop core\\e-shop\\EndPoint.Site\\EndPoint.Site.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\asp core\\e-shop core\\e-shop\\EndPoint.Site\\obj\\",
+      "projectPath": "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\EndPoint.Site\\EndPoint.Site.csproj",
+      "packagesPath": "C:\\Users\\IT Expert\\.nuget\\packages\\",
+      "outputPath": "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\EndPoint.Site\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\IT Expert\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9969,12 +9962,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\asp core\\e-shop core\\e-shop\\eshop.Application\\eshop.Application.csproj": {
-              "projectPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Application\\eshop.Application.csproj"
+            "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\eshop.Application\\eshop.Application.csproj": {
+              "projectPath": "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\eshop.Application\\eshop.Application.csproj"
             },
-            "D:\\asp core\\e-shop core\\e-shop\\eshop.Persistence\\eshop.Persistence.csproj": {
-              "projectPath": "D:\\asp core\\e-shop core\\e-shop\\eshop.Persistence\\eshop.Persistence.csproj"
+            "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\eshop.Persistence\\eshop.Persistence.csproj": {
+              "projectPath": "C:\\zSpecial\\Projects\\e-shop\\eshop-core\\eshop.Persistence\\eshop.Persistence.csproj"
             }
           }
         }
@@ -9987,6 +9981,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "BCrypt.Net-Next": {
             "target": "Package",
@@ -10045,6 +10040,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.21, 3.1.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10053,7 +10066,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
