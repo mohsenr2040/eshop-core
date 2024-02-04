@@ -44,4 +44,8 @@ jobs:
 			username: ${{secrets.ftp_user }}
 			password: ${{secret.ftp_password }}
 			Local-dir: ./Release/
+<<<<<<< HEAD
 		
+=======
+		
+>>>>>>> 97cb0ff0bb244fb142907d4855752a437e7d2cad

@@ -1,11 +1,7 @@
-﻿using eshop.Application.Interfaces.Contexts;
+﻿
 using eshop.Common.Dto;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using MD.PersianDateTime.Core;
 
 namespace eshop.Application.Services.Payments.Queries.GetPaymentForAdmin
 {
@@ -13,40 +9,7 @@ namespace eshop.Application.Services.Payments.Queries.GetPaymentForAdmin
         {
             ResultDto<List<PaymentDto>> Execute();
         }
-    public class GetPaymentForAdminService : IGetPaymentForAdminService
-    {
-        private readonly IDataBaseContext _context;
-        public GetPaymentForAdminService(IDataBaseContext context)
-        {
-            _context = context;
-        }
-
-        public ResultDto<List<PaymentDto>> Execute()
-        {
-            var Payment1 = _context.Payments
-                .Include(r => r.User)
-                .OrderByDescending(r => r.Id)
-                .ToList()
-                .Select(r => new PaymentDto()
-                {
-                    PaymentId=r.Id,
-                    Guid = r.Guid,
-                    Amount = r.Amount,
-                    Authority = r.Authority,
-                    IsPayed = r.IsPayed,
-                    PayDate = new PersianDateTime(r.PayDate).ToShortDateTimeString(),
-                    UserId = r.UserId,
-                    UserName = r.User.FullName,
-                    RefId = r.RefId,
-                }).ToList();
-
-            return new ResultDto<List<PaymentDto>>()
-            {
-                Data = Payment1,
-                IsSuccess = true,
-            };
-        }
-    }
+  
     public class PaymentDto
     {
         public int PaymentId { get; set; }
